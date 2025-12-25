@@ -2,8 +2,20 @@
 
 **Measuring the time-scale-dependent information flow between maternal and fetal heartbeats during the third trimester**
 
-[![arXiv](https://img.shields.io/badge/arXiv-submission%20ready-b31b1b.svg)](https://arxiv.org)
+[![arXiv](https://img.shields.io/badge/arXiv-TBD-b31b1b.svg)](#)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+---
+
+## 📄 Manuscript Access
+
+**arXiv Preprint**: [URL TBD - Coming Soon]
+
+**Published Article**: [URL TBD - Coming Soon]
+
+> **Note**: This repository contains analysis code and documentation. The full manuscript is available via the links above.
+
+---
 
 ## Overview
 
@@ -20,10 +32,9 @@ This repository contains the complete research materials for an academic study a
 
 ```
 felicity1_te/
-├── main.tex                          # Main manuscript (arXiv submission)
-├── main_final.tex                    # Previous version (reference)
-├── fetus.bib                         # Bibliography (1,182 entries)
-├── references.bib                    # Alternative bibliography
+├── README.md                         # This file
+├── LICENSE                           # MIT License
+├── requirements.txt                  # Python dependencies
 │
 ├── figures/                          # Publication figures (15 total)
 │   ├── accel_decel_summary_fs_20_tau_50.pdf
@@ -37,16 +48,10 @@ felicity1_te/
 │   ├── sample_entropy_mlm_analysis_simplified.py
 │   └── statistical_analysis_v2.py
 │
-├── documentation/                    # Analysis summaries
-│   ├── COMPLETE_MLM_SUMMARY.md
-│   ├── CORRELATION_HEATMAPS_SUMMARY.md
-│   └── INTEGRATION_GUIDE_60_PERCENT_FINDING.md
-│
-└── submission/                       # arXiv submission package
-    ├── main.tex
-    ├── fetus.bib
-    ├── 00README.XXX                  # Compilation directive
-    └── [15 figures]
+└── documentation/                    # Analysis summaries
+    ├── COMPLETE_MLM_SUMMARY.md
+    ├── CORRELATION_HEATMAPS_SUMMARY.md
+    └── INTEGRATION_GUIDE_60_PERCENT_FINDING.md
 ```
 
 ## Abstract
@@ -83,19 +88,6 @@ Information-theoretical analysis reveals that maternal-fetal coupling operates t
 
 ## Requirements
 
-### LaTeX Compilation
-```bash
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
-```
-
-### Document Class
-- MDPI template (`mdpi.cls`)
-- Target journal: Entropy
-- Format: Research Article
-
 ### Python Analysis Scripts
 ```bash
 pip install -r requirements.txt
@@ -110,16 +102,6 @@ Required packages:
 - seaborn
 
 ## Usage
-
-### Compiling the Manuscript
-
-```bash
-cd submission/
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
-```
 
 ### Running Statistical Analysis
 
@@ -197,16 +179,23 @@ All 15 publication-ready figures included:
 
 ## Citation
 
-If you use this work, please cite:
+If you use this work, please cite the manuscript:
+
+**arXiv**: [URL TBD - Coming Soon]
+
+**Published Article**: [URL TBD - Coming Soon]
 
 ```bibtex
 @article{felicity1_te_2025,
   title={Measuring the time-scale-dependent information flow between maternal and fetal heartbeats during the third trimester},
   author={[Authors]},
-  journal={arXiv preprint},
-  year={2025}
+  journal={[Journal TBD]},
+  year={2025},
+  note={arXiv: [ID TBD]}
 }
 ```
+
+> **Note**: Citation information will be updated once the arXiv preprint and/or published article are available.
 
 ## License
 
@@ -249,4 +238,13 @@ For questions about this research:
 
 **Keywords**: Maternal-fetal coupling, transfer entropy, prenatal stress programming, fetal autonomic development, heart rate variability, bivariate phase-rectified signal averaging, mixed linear models, sex differences
 
-**Status**: ✅ Ready for arXiv submission
+---
+
+## Repository Contents
+
+This repository contains:
+- ✅ Analysis code and scripts
+- ✅ Publication figures
+- ✅ Statistical results and summaries
+- ✅ Documentation and methodology guides
+- ❌ Manuscript files (see links above for manuscript access)

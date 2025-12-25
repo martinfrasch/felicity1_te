@@ -96,14 +96,24 @@ analysis_output_corrected/
 *.jpg
 *.jpeg
 
-# Submission Directories (Keep source only)
-# ------------------------------------------
+# Manuscript Files (Link to arXiv/Published Article Instead)
+# -------------------------------------------------------------
+main.tex
+main_final.tex
+fetus.bib
+references.bib
+*.tex
+!README.md
+
+# Submission Directories (Link to arXiv/Published Article Instead)
+# ------------------------------------------------------------------
 arxiv_submission/
 arxiv_submission_v*/
 arxiv_test/
 overleaf_clean/
 OVERLEAF*/
 Measuring_the_time_scale_dependent_information_flow*/
+Measuring the time-scale-dependent*/
 
 # Daily Notes (Personal)
 # -----------------------
@@ -114,6 +124,3 @@ Measuring_the_time_scale_dependent_information_flow*/
 !README.md
 !LICENSE
 !requirements.txt
-!main.tex
-!main_final.tex
-!fetus.bib

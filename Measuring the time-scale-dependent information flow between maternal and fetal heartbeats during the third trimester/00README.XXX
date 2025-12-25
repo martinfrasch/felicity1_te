@@ -1,7 +1,0 @@
-This submission requires pdflatex for compilation.
-
-The main file is: main.tex
-
-Please compile with: pdflatex main.tex
-
-Do NOT use xelatex or lualatex.

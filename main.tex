@@ -1,0 +1,486 @@
+\documentclass[10pt]{article}
+
+% original GoodleDoc notes:
+% https://docs.google.com/document/d/17FuK-sve__P1VxORPR2uumba3yIN4fNelbUDvHoHYrI/edit#heading=h.eji8l7dcex3c
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage[numbers,sort&compress]{natbib}
+
+\graphicspath{{./figures/}}
+\usepackage{url}
+
+\newcommand{\N}[1]{{\color{magenta} #1}}
+\newcommand{\M}[1]{{\color{blue} MF: #1}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\E}{\mathbb{E}}
+
+\title{Measuring the time-scale-dependent information flow between maternal and fetal heartbeats during the third trimester}
+
+\author{Nicolas B. Garnier$^{1}$, Marta Antonelli$^{2,3}$, Silvia Lobmaier$^{2}$, Martin Frasch$^{4,5}$\\
+\\
+\small $^{1}$Laboratoire de Physique, Univ Lyon, ENS de Lyon, CNRS, F-69342 Lyon, France\\
+\small $^{2}$Technical University of Munich; Institute for Advanced Study, Garching, Germany\\
+\small $^{3}$Instituto de Biología Celular y Neurociencia, Universidad de Buenos Aires, Argentina\\
+\small $^{4}$Dept. of Obstetrics and Gynecology, University of Washington, Seattle, WA, USA\\
+\small $^{5}$Institute on Human Development and Disability, University of Washington, Seattle, WA, USA\\
+\\
+\small Email: nicolas.garnier@ens-lyon.fr}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We demonstrated coupling between maternal and fetal heartbeat using bPRSA method. This indicated that fetal heart rate is entrained in the respiratory band by the maternal heart rate in the fetuses of stressed mothers, but not controls.
+Now, we set out to demonstrate the presence and difference in time scale- and sex-specific information flow between maternal and fetal heart rate as a function of chronic stress exposure using strict information-theoretical principles.
+
+We demonstrate the presence of information flow, predominantly, but not exclusively, from mother to fetus, at the short-term (0.5-2.5 s), but not long-term (2.5 - 5 s) time scales, with sex-specific differences. However, with the transfer entropy approach, we were unable to demonstrate the strict presence of information flow only in stressed mother-fetus dyads.
+
+We provide insight into the dependence of these findings on the sampling rate of the underlying data, identifying 4 Hz, commonly used for ultrasound-derived fetal heart rate recordings, as the necessary and sufficient sampling rate regime to capture the information flow. Future studies should explore additional information-theoretical conditional approaches to resolve stress-specific and time-scale-specific differences in information flow.
+
+\M{hello}
+\end{abstract}
+
+\noindent\textbf{Keywords:} multiscale analysis, information theory, high-order statistics, fetal heart rate
+
+\tableofcontents
+
+\section{Introduction}
+
+
+Intermittent synchronization of maternal and fetal heartbeats has been established~\cite{Lobmaier:2020}. Maternal-fetal heartbeat synchronization can serve as a biomarker of chronic stress during pregnancy, impacting maternal and fetal as well as postnatal well-being~\cite{Antonelli:2022}. Such findings are not only of scientific interest but also clinically actionable during pregnancy, helping increase awareness of chronic stress and inform behavioral and social interventions to reduce it. However, much remains unclear about this phenomenon. Specifically, its developmental physiology, the methodological and information-theoretical underpinnings of its computation remain active areas of research.  
+
+Here, we sought to apply the transfer entropy (TE) approach to elucidate the dynamics of information flow between the mother and the fetus. Given the rising interest in wearables, which typically sample heart rate at low sampling rates to monitor wellness and clinical characteristics, we also sought to investigate the relationship between various TE-derived metrics and attributes of data acquisition and processing, with a focus on sampling rate and postnatal health outcomes. For this, we focused on the acceleration- and deceleration-dependent TE metrics. 
+
+We hope that our findings will contribute to the development or application of appropriate biosensor technologies to capture the dynamic properties of maternal-fetal heartbeat coupling effectively and to harness their potential to identify mother-fetus dyads at risk of suboptimal health outcomes, enabling earlier therapeutic intervention and steering health trajectories toward their optimal range.
+
+\section{Methods}
+
+\subsection{Structure of the Methods section}
+(see table of contents)
+
+Present the dataset
+
+Filtering 
+
+DEC/ACC: visual and analytical understanding
+
+TE pipeline (surrogates etc)
+
+Sampling rate effects on TE
+
+TE in relation to other biomarkers w/ and w/o accounting for ACC/DEC. Relationship to sex \& exposure (stress vs control)
+
+
+\subsection{Cohort characteristics and data preprocessing}
+
+The initial findings of the underlying FELICITy study, using the bPRSA approach and the SAVEr algorithm for fetal/maternal ECG and R peak extraction, have been reported elsewhere~\cite{Lobmaier:2020, Sarkar:2022, Li:2017}. 
+
+Ethics approval was obtained from the Committee of Ethical Principles for Medical
+Research at the TUM (registration number 151/16S; ClinicalTrials.gov registration number NCT03389178). All methods were performed in accordance with the relevant guidelines and regulations. We obtained informed consent for study participation from each subject. The complete experimental design is reported in ~\cite{Lobmaier:2020}. 
+
+Briefly, in this prospective study, stressed mothers were matched 1:1 with controls on parity, maternal age, and gestational age at study entry. Recruited subjects were between 18 and 45 years of age and were in their third trimester. The study ran for 22 months from July 2016 until May 2018, and subjects were selected from a cohort of pregnant women followed in the Department of Obstetrics and Gynecology at “Klinikum rechts der Isar” of the Technical University of Munich (TUM). This is a tertiary
+center of Perinatology located in Munich, Germany, which serves 2000 mothers/newborns per year. Figure 1 presents the recruitment flowchart for this dataset and the data used in this study. 
+
+% figure 1
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.9\linewidth]{cohort.pdf}
+\end{center}
+\caption{Recruitment flow chart for the FELICITy dataset.}
+\label{fig:filtering}
+\end{figure}
+
+
+Four exclusion criteria were applied, namely (a) serious placental alterations defined as fetal growth restriction according to Gordijn et al.~\cite{Gordijn:2016};
+(b) fetal malformations; (c) maternal severe illness during pregnancy; (d) maternal drug or alcohol abuse.
+
+
+The Cohen Perceived Stress Scale questionnaire was administered to gauge chronic non-specific stress exposure (PSS-10)~\cite{Cohen:1983}. PSS-10 $\geq$ 19 categorized subjects as stressed, as established~\cite{Lobmaier:2020}. We applied inclusion and exclusion criteria following the return of the questionnaires. When a subject was categorized as stressed, the next screened participant, matched on gestational age at recording and with a PSS-10 score $<$ 19, was entered into the study as a control. In addition to PSS-10, the participants received the German Version of the "Prenatal Distress Questionnaire" (PDQ), which contains 12 questions on pregnancy-related fears and worries regarding changes in body weight and other pregnancy-related issues, the child's health, delivery, and the impact of pregnancy on the woman's relationship.
+
+For ECG recordings, we standardized the clinical setting as much as possible across all study participants. We performed the recordings on all women in the supine half-left recumbent position, usually at the same time of day (afternoon). A transabdominal ECG (aECG) recording with a sampling rate of 900 Hz and a duration of at least 40 min was performed 2.5 weeks after screening. The AN24 (GE HC/Monica Health Care, Nottingham, UK) was used. We calculated the signal quality index (SQI)19 for aECG in 1-s windows and subsequently discarded segments with an SQI below 0.5. Using the fetal and maternal ECG deconvolution algorithm SAVER19, we extracted fetal ECG (fECG) and maternal ECG (mECG) at a 1000 Hz sampling rate.
+
+We detected fetal and maternal R-peaks separately from the corresponding fECG and mECG signals. The fetal- and maternal RR interval time-series were subsequently derived from the fetal and maternal R-peaks. We then calculated the mean fetal heart rate (fHR) and mean maternal heart rate (mHR) values.
+
+Upon delivery of the baby, we recorded the clinical data, including birth weight, length, and head circumference, pH, and Apgar score.
+
+Next, we removed some mother-foetus dyads from the cohort if the following was true:  the fHR was of the order of the mHR (i.e., below 100 bpm) for a significant fraction of time during the experiment, the corresponding dyad was removed.
+
+HR data was computed from the R-R intervals extracted from the ECG signal, with R peaks given by the SAVEr algorithm, with a 1000 Hz resolution. At this stage, there was a noise of the order of 0.5 bpm in the HR data due to the 1000 Hz sampling rate of ECG.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Low-pass filtering}
+
+The raw heart rate $X$ signal is derived from the successive time positions of the R-peaks of the ECG signal, given by {SAVEr} with a resolution $f_{\rm ECG}$, as follows.
+This raw HR signal is a step-wise function of time sampled at $f_{\rm ECG}$: its value is constant between two consecutive R peaks. Indeed, as time passes, its value changes when, and only when, a new R peak occurs: it is then possible to compute the size of the RR-interval that just ended when the new R peak occurs. A new constant value of the raw heart rate can then be deduced, which is a continuous value for all RR-intervals. 
+To have a continuously evolving HR signal sampled at a given frequency $f_s$ ---~possibly much lower than the typical frequency associated with RR-intervals~---, we first low-pass filter the raw HR signal by using a local averaging over a time interval corresponding exactly to the timescale $\tau$ we are willing to study. 
+\begin{align}
+X_\tau(t) &= \frac{1}{\tau}\int_{t'=t-\tau}^t X(t') dt' \label{eq:avg:formal}\\
+&= \frac{1}{\tau f_{\rm ECG}} \sum_{k=k_{t-\tau}+1}^{k_t} X_k \label{eq:avg:practical} \,,
+\end{align}
+where we have noted $k_t = t f_{\rm ECG}$ the index of the point at time $t$ in a signal sampled at $f_{\rm ECG}$. The first eq.(\ref{eq:avg:formal}) is formal and relates to a time-continuous signal while the second eq.(\ref{eq:avg:practical}) is the one used in practice.
+This procedure is depicted in Fig.\ref{fig:filtering}. 
+
+% figure 2
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.9\linewidth]{filtering_example}
+\end{center}
+\caption{Example of mother HR data.
+The raw FHR sampled at 1kHz is a stepwise function of time (black). We low-pass filter the raw HR signal using a low-pass cutoff frequency $1/\tau$, where the time-scale $\tau$ represents the scale at which we will further analyze the information contents of the heart rates. Low-pass-filtered signals are then downsampled at $f_s$=20Hz. 
+Two examples are represented: $\tau$=0.5s (blue) or $\tau$=2s (magenta). 
+Larger circles indicate times when the filtered mHR signal is increasing, which we define as accelerations.}
+\label{fig:filtering}
+\end{figure}
+  
+After filtering, the data $X_\tau$ is down-sampled at a fixed sampling frequency $f_s$ which we set to 20Hz, unless noted otherwise.
+%
+Filtering removes noise and information at frequencies higher than the cutoff frequencies $1/\tau$ which corresponds to the timescale $\tau$ we are studying. In the following, we will vary $\tau$ in the range [0.5s-20s] to explore the distribution of information in the heart rates. The lowest value $\tau=0.5$s in this range corresponds to the typical time interval between two consecutive R-peaks: examining time-scales lower that 0.5s is thus illusory, as there is no information in the raw HR signal at these scales.
+The larger value $\tau=20$s is sufficient to retain all the interesting behavior of the interactions we are searching for.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{HR decelerations and accelerations}
+
+We define HR accelerations and decelerations at a given time-scale $\tau$ as follows.
+For a given HR signal $X$, we first low-pass filter this signal as described above using the time-scale $\tau$, and then examine the sign of the time-derivative of the filtered signal.
+We define accelerations ${\cal A}_\tau$ as the set of times (epochs) where the time-derivative of the filtered signal $X_\tau$ is positive:
+\begin{equation}
+t \in {\cal A}_\tau \Leftrightarrow \frac{d X_\tau(t)}{dt} > \mu, \qquad {\rm with} \quad \mu=0
+\label{def:accel}
+\end{equation}
+Respectively, we define decelerations ${\cal D}_\tau$ as the set of times where the time-derivative is negative:
+\begin{equation}
+t \in {\cal D}_\tau \Leftrightarrow \frac{d X_\tau(t)}{dt} < -\mu, \qquad {\rm with} \quad \mu=0
+\label{def:decel}
+\end{equation}
+
+Because the value of the time-derivative depends on the time-scale of the filter, so does the partitioning of epochs in accelerations and decelerations, as can be seen in Fig.~\ref{fig:filtering}. At a given timescale $\tau$, accelerations, resp. decelerations occur in sets of consecutive times (epochs), the duration of which is typically larger than $\tau$. As a consequence, for smaller time-scales $\tau$ we expect a larger number of distinct ---~well-separated in time~--- accelerations, resp. accelerations, while for larger time-scales the number of distinct accelerations, resp. decelerations, is smaller, but each of them is expected to be "longer", in that it should contain more points.
+
+Our method can be tuned by requiring that the absolute value of the time-derivative is larger than a finite threshold $\mu\neq0$, but our explorations showed that increasing the threshold severely reduces the number of points in acceleration and deceleration epochs. This is expected as increasing $\tau$ smoothes more the HR signal, thus reducing its dynamics: the standard deviation of $X_\tau$, and hence of its time-derivative, is typically $\sqrt{\tau}$ times smaller than the standard deviation of $X$. We chose in this article a threshold $\mu=0$ to have enough points in accelerations and decelerations.
+
+An important feature of our approach is that accelerations and decelerations are defined using filtered signals and varying the time scale. This is in strong contrast to a more classical definition using the raw heart rate signal ---~which is piece-wise constant~--- which would require using a non-zero threshold $\mu$. 
+
+% figure 3
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.9\linewidth]{nb_pts_accel_decel_mother_fs_20_tau_50} \\
+\includegraphics[width=.9\linewidth]{nb_pts_accel_decel_foetus_fs_20_tau_50}
+\end{center}
+\caption{Statistics of accelerations/decelerations ratios computed at timescale $\tau=2.5$s.
+The upper and lower parts correspond to the mother's HR and the fetus's HR, respectively.
+In each case, the first line presents the fraction of time points that are accelerations or decelerations, while the second line presents the ratio of the number of decelerations to the number accelerations.
+}
+\label{fig:accel_decel_stats}
+\end{figure}
+
+We present in Fig~\ref{fig:accel_decel_stats} some statistics on the subject-specific ratios of acceleration times to deceleration times. 
+Firstly, we note that typically 20\% of the data cannot be assigned to either accelerations or decelerations~\footnote{ 
+Is it evidence of more quiescent periods in the mHR compared to fHR (~5\%) or an artifact of SAVEr?}.
+Secondly, the ratios decelerations/accelerations are always around 1 within the error bars. Interestingly, we note there are nevertheless slightly less decelerations than there are accelerations, especially for the fetal hear rates; this is known from previous literature [cite a paper detailing a bit more accelerations than decelerations.]~\footnote{TBC in future work. There are tools to tackle this, like AsymI.}
+
+\N{to do maybe: detail here or eaarlier the sub-groups, so that the figure can be fully described in the text}
+
+% figure 4figure
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.9\linewidth]{accel_decel_summary_fs_20_tau_50}
+\end{center}
+\caption{Group dependencies of statistics of accelerations/decelerations ratios computed at timescale $\tau=2.5$s.
+}
+\label{fig:accel_decel_summary}
+\end{figure}
+
+
+\subsection{Information and complexity of the conditioned signals}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.9\linewidth]{entropy_rate_ensemble_averaged_117_couples.pdf}
+\end{center}
+\caption{Entropy rate $h$ as a measure of information or complexity in the conditioned signals. (a) results when conditioning is performed on the fHR signal, and(b)) when it is performed on the mHR signal. Blue (resp. orange) curves are for fHr (resp. mHR), when using conditioning on accelerations (on fHR in (a) and on mHR in (b)); green (resp. red) are for fHR (resp. mHR) when using decelerations. For reference, we have plotted in black the entropy rate measured in fHR and mHR when not using any conditioning.
+}
+\label{fig:complexities}
+\end{figure}
+
+To get some insight on the information content of the conditioned signals, we measured their entropy rate~\cite{Spilka:2014} over the time-scale $\tau$:
+\begin{align}
+h(\tau) &=H(X_\tau(t),X_\tau({t-\tau}))-H(X_\tau({t-\tau}) \\
+&= H^{(2)}(X_\tau)-H(X_\tau)
+\end{align}
+where $H(X_\tau)$ is the Shannon entropy of the filtered signal $X_\tau$ and $H^{(2)}(X_\tau)$ is the Shannon entropy of the bi-variate filtered signal $(X_\tau(t), X_\tau(t-\tau))$, obtained by time-embedding the filtered signal $X_\tau$ over the time-scale $\tau$.
+Here, we use data sampled at $f_s=$20Hz.
+
+We present in Fig.\ref{fig:complexities} these quantities averaged over the cohort. We have a confidence interval of $\pm0.5$.
+%For SampEn, we have a confidence interval of $\pm0.05$. 
+We notice that entropy rate is roughly constant for all time-scales, except below 0.5-1s. This is expected, as there is indeed no information in the HR signal between 2 consecutive RR peaks, which are typically separated by 0.5s for the fHR and 0.8s for the mHR.
+%We also note that SampEn cannot be measured for time-scales larger than about 4.5s when conditioning of fHR accelerations and larger than about 2s when conditioning on mHR. This is probably due to poor statistics (\N{to check}). 
+
+When not using any conditioning, the entropy rate is always larger than any of its counterparts using conditioning; this holds for both fHR and mHR signals. 
+%The same is true for SampEn, where the SampEn values for the unconditioned signals is much larger (about 1) and not represented in Fig.~\ref{fig:complexities}. 
+We observe that whether with or without conditioning, the fetal heart rate always has a higher entropy rate than the mHR, except when conditioning using the fHR accelerations. In this latter case only, fHR seems to have a lower entropy rate than mHR in the band [0.5-2.5]s.
+
+
+\paragraph{Boxplots for entropy rate}
+
+Boxplots are given in Fig.~\ref{fig:complexities_boxplots} for either the maximal value of the entropy rate, or its mean value (or AUC) in the range $[0.5 - 2.5]$s.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.9\linewidth]{boxplots_max_h_condition_foetus_fs_20.pdf}
+\includegraphics[width=.9\linewidth]{boxplots_max_h_condition_mother_fs_20.pdf}
+\includegraphics[width=.9\linewidth]{boxplots_mean_h_condition_foetus_fs_20.pdf}
+\includegraphics[width=.9\linewidth]{boxplots_mean_h_condition_mother_fs_20.pdf}
+\end{center}
+\caption{Typical dependence of the maximal value (first two lines) of entropy rate and of its mean value in the range $[0.5 - 2.5]$s (last two lines) on conditioning, and depending on the characteristics (stress, male/female foetus).
+}
+\label{fig:complexities_boxplots}
+\end{figure}
+
+\subsection{Transfer Entropy: definitions and how-to}
+
+In order to explore the respective influences of mother and foetus heart rates, we compute the transfer entropy between the filtered heart rates of the mother and her foetus.
+Transfer entropy was introduced by Schreiber~\cite{Schreiber:2000} and has since gained enormous popularity when willing to explore information exchanges between two signals in a plethora of systems. 
+
+For two signals $X(t)$ and $Y(t)$ and a positive time lag $\tau'$, transfer entropy $TE^{(\tau')}(X(t)\rightarrow Y(t))$ expresses the amount of shared information between $X(t)$ and $Y(t+\tau')$ that is not contained in $Y(t)$. In other words, it quantifies how much information flows from $X$ to $Y$ on the time-scale $\tau'$.
+
+Noting $M_\tau$ and $F_\tau$ the maternal and the fetal heart rates filtered at the time-scale $\tau$, we set the time-lag $\tau'=\tau$ to define
+\begin{align}
+TE_{m \rightarrow f}(\tau) &= TE^{(\tau)}(M_\tau(t) \rightarrow F_\tau(t)) \\
+TE_{f \rightarrow m}(\tau) &= TE^{(\tau)}(F_\tau(t) \rightarrow M_\tau(t)) 
+\end{align}
+
+We also define the “net” TE from mother to fetus as the difference:
+\begin{equation}
+TE(\tau)=TE_{m \rightarrow f}(\tau)-TE_{m \rightarrow f}(\tau)\,,
+\end{equation}
+which is positive when some information flows from the mother to her foetus, or negative whe information flows from the foetus to the mother.
+
+The TE is measured using a nearest neighbors estimator with $k=5$ neighbors~\cite{} and using 4000 points. We estimate the bias of this estimator by computing the TE with surrogate data, as follows. For each set of signals $(X,Y)$, we construct 10 sets of surrogate signals $(X_s, Y_s)$ by shuffling the originals signals which destroys the complete time dependencies between $X$ and $Y$. We then measure $TE(X_r \rightarrow Y)$ and $TE(Y_r \rightarrow X)$. The values we obtain are very small (of the order $10^{-3}$). We average these values over the set of 10 surrogates and subtract this estiate of the bias from the the $TE(X\rightarrow Y)$ and $TE(Y\rightarrow X)$, respectively.
+
+Because a dataset contains much more than 4000 points in time, we compute the TE on 10 different subsets of 4000 points, randomly picked in the dataset. This allows us to estimate the standard deviation of the TE estimator, which we use to represent error bars in the figures. For a given subject, these error bars are small.
+
+- over the cohort: it is large
+
+We compute the TE for a set of time lags $\tau$ ranging from $1/f_s$ up to 20$f_s$, with a step $1/f_s$. Because we are interested in time-scale range $[0.5; 2.5]$s, we compute the maximal value $TE^{\rm max}$ of the TE in that range, as well as the average value $TE^{\rm AUC}$ of the TE within that range, which up to a factor 2s represents the area under the curve (AUC) of $TE(\tau)$ in that range.
+
+
+
+\pagebreak
+\section{Results}
+
+\subsection{Methodological insights: Dependence of TE on HR sampling rate}
+
+Acquiring data on the correct sampling rate is crucial for the correct estimation of HRV metrics. Here we test the impact of sampling rates on TE estimates. We note that the present approach has limitations, because the originally low-sampled BBIs are intrinsically less precise than ECG that was downsampled. MOVE AND EXPAND ON THIS IN DISCUSSION SECTION
+After the filtering stage, starting with 1000 Hz sampled HR data, we re-sample the data at a typical frequency $f_s=20$Hz.
+We also tried several other values (4Hz / 10Hz / 100Hz).
+
+%Figure~\ref{fig:varying_fs} shows how the average TE \N{(not defined at this stage!)} evolution with the timescale $\tau$ depends on the sampling frequency.
+Figure~\ref{fig:varying_fs:average} shows that the ensemble averaged TE does not depend on the sampling frequency of the HR.
+
+\N{- plot another quantity, not averaged TE}
+
+% figure N
+\begin{figure}[htb]
+\begin{center}
+%\includegraphics[width=.9\linewidth]{new_TE_ensemble_averaged_120_couples}
+%\includegraphics[width=.49\linewidth]{TE_ensemble_averaged_vs_sampling_117_couples.pdf}
+\includegraphics[width=.49\linewidth]{TE_ensemble_averaged_vs_sampling_117_couples_zoom.pdf}
+\end{center}
+\caption{Ensemble averaged TE does not depend on the sampling frequency of the HR.}
+\label{fig:varying_fs:average}
+\end{figure}
+
+% figure N-1
+%\begin{figure}[htb]
+%\begin{center}
+%\includegraphics[width=.7\linewidth]{TE_couple19_vs_sampling.pdf}
+%\includegraphics[width=.7\linewidth]{TE_couple25_vs_sampling.pdf}
+%\includegraphics[width=.7\linewidth]{TE_couple32_vs_sampling.pdf}
+%\end{center}
+%\caption{TE does not depend on the sampling frequency of the HR, but lower sampling frequencies do not allow for the computation of accelerations and decelerations}
+%\label{fig:varying_fs}
+%\end{figure}
+% NOTE: Figures TE_couple19/25/32_vs_sampling.pdf are missing - commented out for now
+
+
+For all other results in this article, we selected $f_s=20$Hz, but 10Hz or even 4Hz should be perfectly.
+
+% maybe for supplemental material: causality_couples_2023-01-17_decel_short_tests_1couple
+
+\subsection{TE across the cohort and relation to sex and exposure}
+. Identification of time scales
+
+
+Using the time-scale range $[0.5, 2.5]$s, we compute the maximal value of the net TE, as well as the mean value of the TE using all available points, as well as using only accelerations, resp. decelerations, each of those being computed either using maternal HR or fetal HR. Results are depicted in Fig.~\ref{fig:boxplots:accel_decel}.
+
+% figure 3
+\begin{figure}[htb]
+\begin{center}
+%\includegraphics[width=.9\linewidth]{max_TE_accel_decel_foetus_fs_20_tau_-1.pdf}\\
+%\includegraphics[width=.9\linewidth]{max_TE_accel_decel_mother_fs_20_tau_-1.pdf}\\
+%\includegraphics[width=.9\linewidth]{mean_TE_accel_decel_foetus_fs_20_tau_-1.pdf}
+%\includegraphics[width=.9\linewidth]{mean_TE_accel_decel_mother_fs_20_tau_-1.pdf}\\
+% NOTE: max/mean_TE_accel_decel figures missing - using TE_accel_decel_boxplots instead
+\includegraphics[width=.9\linewidth]{TE_accel_decel_boxplots_fs_20_tau_-1.pdf}\\
+\end{center}
+\caption{Boxplots representation of our results, showing the typical values of maximal TE (first two lines) and mean TE (last two lines) in the range [0.5 - 2.5]s. First column shows that only small values are obtained when all available points are used, whereas TE values are larger if only accelerations are used (second column) or if only decelerations are used (third column).
+\N{two plots are identical (when using all points), I should thinkg about some way to remove them}
+}
+\label{fig:boxplots:accel_decel}
+\end{figure}
+
+\subsection{Statistical comparisons}
+
+
+\paragraph{Against perfect distribution}: is there a signal in our data, in general?
+Some p-values related to max(TE) (positive value, versus 0-value): (use only 2 digits!)
+[1-sided one-sample T test]
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+ $p$-values   & all pts & accelerations & decelerations \\
+\hline
+\hline
+all	    & 0.058     &  0.076 &  0.085 \\
+stress  & 0.0040    &  0.071 &  0.085 \\
+cool	& 0.00058  &  0.077    & 0.082 \\
+male	& 0.0014   &  0.077    & 0.074 \\
+female  & 0.0021    & 0.074 & 0.092 \\
+\hline
+\end{tabular}
+
+So clearly:
+the less points, the worse the estimation (accel/decel vs all). 
+considering groups is a good idea
+
+\paragraph{Group effects}
+Some more p-values to compare male/female and cool/stressed:
+(1-sided two-sample T test)
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+ $p$-values   & all pts & accelerations & decelerations \\
+\hline
+\hline
+male vs female  & 0.47 - 0.48  & 0.47 - 0.48 & 0.46 - 0.47 \\
+cool vs stress  & 0.47 - 0.48  & 0.48 - 0.48 & 0.46 - 0.46 \\
+\hline
+\end{tabular}
+
+So clearly: max(TE) cannot distinguish the groups.
+
+\medskip
+
+The net TE diminishes when the time-scale is increased. 
+
+There is no particular interesting region (as between 0.5s and 1.5s like before with the wrong results) where the TE is especially large. We can nevertheless deduce that the exchange occurs on the typical timescale which is smaller than 5s.
+
+
+
+
+Jan 24, 2023:
+3) Interim summary: No clear local maxima/minima of TEmax really; perhaps we should quantify f>m and m>f separately and in dependence on time scale? It may be non-trivial, because we initially thought only net information transfer matters, but perhaps it is something like a zero sum game from the standpoint TEmax?
+Cf. https://www.nature.com/articles/s41598-019-56204-5 
+4) Expecting results for conditioning on the fetus INSTEAD of on the mother to determine the TE.
+
+
+\subsection{TE in relation to other biomarkers}
+
+w/ and w/o accounting for ACC/DEC. Relationship to sex and exposure (stress vs control)
+
+Cf. https://exploratory.io/dashboard/ivC1vEA9IX/FELICITy-1-TE-and-outcomes-kar3YFD4iH
+
+%We present in Fig.~\ref{fig:TE_PSS} and Fig.~\ref{fig:TE_PDQ} the values of TE AUC as a function of the PSS index (Fig.~\ref{fig:TE_PSS}) or the PDQ index (Fig.~\ref{fig:TE_PDQ}). Whether the TE is computed using accelerations or decelerations only, and whether these were extracted from maternal or fetal HR, we do not see any
+%dependence of the TE on the stress scores.
+Analysis of TE AUC values as a function of PSS and PDQ indices shows that, whether the TE is computed using accelerations or decelerations only, and whether these were extracted from maternal or fetal HR, we do not see any clear dependence of the TE on the stress scores.
+
+% figure
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=.8\linewidth]{TE_AUC_PSS_120_couples.pdf}
+%\end{center}
+%\caption{Relation to PSS index: AUC of TE in the range [0.5 - 2.5]s is plotted as a function of the PSS index accross the cohort for male (blue) or female (pink) fetuses. Each subplot considers either accelerations (first line) or decelerations (second line) computed using either maternal HR (left column) or fetal HR (right column).
+%}
+%\label{fig:TE_PSS}
+%\end{figure}
+% NOTE: Figure TE_AUC_PSS_120_couples.pdf is missing - commented out for now
+
+
+% figure
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=.8\linewidth]{TE_AUC_PDQ_120_couples.pdf}
+%\end{center}
+%\caption{Relation to PDQ index: AUC of TE in the range [0.5 - 2.5]s is plotted as a function of the PSS index accross the cohort for male (blue) or female (pink) fetuses. Each subplot considers either accelerations (first line) or decelerations (second line) computed using either maternal HR (left column) or fetal HR (right column).
+%\N{the vertical dashed line should probably be located at another position! I've used 19 (same as PSS).}
+%}
+%\label{fig:TE_PDQ}
+%\end{figure}
+% NOTE: Figure TE_AUC_PDQ_120_couples.pdf is missing - commented out for now
+
+%The TE AUC, as well as the maximal TE value, is much larger when only accelerations or deceleratinos are considered, as can be seen on Fig.~\ref{fig:TE_both_PSS_PDQ} for example.
+The TE AUC, as well as the maximal TE value, is much larger when only accelerations or decelerations are considered (see Fig.~\ref{fig:boxplots:accel_decel}).
+
+% figure
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=.9\linewidth]{TE_AUC_20dHz_both_scores.pdf}
+%\end{center}
+%\caption{Relation between PSS score, PDQ score and TE AUC in the range [0.5 - 2.5]s. Left subplot: all points are used to compute TE. Middle and right subplots: only accelerations, resp. decelerations, computed from maternal HR are used to compue the TE.
+%Heatmap indicates the net TE AUC for a given subject, with a bluish color for male fetuses, and a redish color for female fetuses.
+%}
+%\label{fig:TE_both_PSS_PDQ}
+%\end{figure}
+% NOTE: Figure TE_AUC_20dHz_both_scores.pdf is missing - commented out for now
+
+Time scale-specific TE that does NOT depend on stress exposure but seems to differ by sex; i.e., we have evidence of presence and sex dependence of TE 
+
+Explore the role of the resampling rate (10 Hz is the optimum between computational efficiency and capture of relevant information?) 4Hz may be as good?
+
+Correlations to PSS and PDQ: 
+PSS - no clear pattern, even if accounting for sex
+PDQ: there is some clustering but not clear yet what it represents 
+Cortisol: no clear pattern
+
+
+
+
+\section{Discussion}
+
+Are we missing the TE in stressed m-f dyads because we are not accounting for acceleration/deceleration dynamics?
+-> We are. acceleration/deceleration are included in the HR signals.
+
+SAVER is assumed to produce a certain amount of noise in fetal R peak placement which should not alter the overall outcome of the assessment.
+-> but this noise has an entropy, which may be larger than what we really want to measure…
+
+Discussion against past work on the presence of maternal-fetal HR synchronization (fetal gestational age, techniques).(Van Leeuwen et al. 2003; Ivanov, Ma, and Bartsch 2009)
+
+Even if we are not able to observe dec/acc specific TE dynamics due to constraints on 40 min recording, the methodology will be useful on overnight recordings in this population.[REF Columbia team]
+
+Discuss the need to have SQI data to focus TE analysis on high-quality periods only.
+
+Future outlook: develop information tools on raw aECG like our DL approach.
+
+The confirmation of bidirectional maternal-fetal and fetal-maternal information flow, regardless of the stress exposure, generally is in line with our findings in Sarkar et al 2022 ~\cite{Sarkar:2022} where regular mECG alone performed best in predicting fetal exposure to stress in binary classification as well as in the regression prediction tasks. Indeed, the findings in Sarkar et al. indicated that the information flow is not limited to HR but is also to be expected in ECG waveform itself. Testing this will be the subject of future work.
+Moreover, our finding is also intriguing from the translational viewpoint: if information about fetal physiology is indeed reflected in some complex way in the mHR, it provides the rationale to examine mECG/mHR data directly for reflections of fetal physiology rather than having to rely on direct fetal vital signs data such as the difficult-to-extract fECG waveform and fHR. Consequently, future work should explore the potential of maternal wearables to predict fetal behavioral states and health outcomes. 
+
+Limitations: Upsampling from 900 Hz aECG data from AN24 to 1000 Hz in SAVER introduces some noise, but not clear whether it influences the TE.
+-> to check. Decided not to pursue it.
+Note that 1 minute of data may not be enough… (too poor statistics)
+
+\bibliographystyle{elsarticle-num} 
+\bibliography{fetus.bib}
+
+%\appendix
+%However, a higher sampling rate also introduces more noise which may provide false TE readings with larger confidence intervals.
+%The drop in TE is around tau=0.5 s or above 2Hz which is compatible with the understanding that the vagus nerve does not contribute above that time scale, so no need to capture it. That supports that 4 Hz is Ok.
+
+\end{document}

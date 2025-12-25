@@ -1,0 +1,153 @@
+================================================================================
+SAMPLE ENTROPY MLM ANALYSIS - SIMPLIFIED
+Conditioning Framework with Data Quality Constraints
+================================================================================
+
+Loading sample entropy data...
+Loaded 120 patients
+
+Data Quality Assessment:
+--------------------------------------------------------------------------------
+fetus_full               : 120/120 (100.0%)
+mother_full              : 120/120 (100.0%)
+fetus_fHR_accel          :   8/120 (  6.7%)
+mother_fHR_accel         :   8/120 (  6.7%)
+fetus_fHR_decel          :   0/120 (  0.0%)
+mother_fHR_decel         :   0/120 (  0.0%)
+fetus_mHR_accel          :  16/120 ( 13.3%)
+mother_mHR_accel         :  16/120 ( 13.3%)
+fetus_mHR_decel          :   7/120 (  5.8%)
+mother_mHR_decel         :   7/120 (  5.8%)
+
+Loading sex/stress information from Nicolas_felicity1/max_TE_mHR_conditioning.csv...
+Loaded sex/stress for 120 patients
+
+Reshaping to long format (simplified conditioning)...
+
+Created long-format dataframe:
+  Total observations: 286
+  Unique patients: 120
+  Observations per patient: 2.4
+
+Distributions:
+  Sex: {'female': 180, 'male': 106}
+  Stress: {'control': 146, 'stressed': 140}
+  HR_Source: {'fetal': 143, 'maternal': 143}
+  Conditioning: {'none': 240, 'mother_accel': 32, 'mother_decel': 14}
+
+Sample entropy value statistics:
+  Mean: 0.8872
+  Std: 0.4315
+  Min: 0.0116
+  Max: 1.8120
+
+✓ Saved data to: sample_entropy_mlm_data_simplified.csv
+
+================================================================================
+MIXED LINEAR MODEL: SAMPLE ENTROPY (SIMPLIFIED)
+================================================================================
+
+Model specification:
+  Value ~ Sex + Stress + HR_Source + Conditioning + HR_Source:Conditioning + (1|Patient_ID)
+  (Simplified due to sparse conditioned data)
+  N observations: 286
+  N patients: 120
+
+Fitting model with REML estimation...
+
+================================================================================
+MODEL RESULTS: SAMPLE ENTROPY
+================================================================================
+
+                               Mixed Linear Model Regression Results
+===================================================================================================
+Model:                           MixedLM                Dependent Variable:                Value   
+No. Observations:                286                    Method:                            REML    
+No. Groups:                      120                    Scale:                             0.0602  
+Min. group size:                 2                      Log-Likelihood:                    -17.4686
+Max. group size:                 6                      Converged:                         Yes     
+Mean group size:                 2.4                                                               
+---------------------------------------------------------------------------------------------------
+                                                         Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                                                 0.000    0.080  0.000 1.000 -0.156  0.156
+C(Sex)[T.male]                                            0.000    0.034  0.000 1.000 -0.066  0.066
+C(Stress)[T.stressed]                                    -0.000    0.031 -0.000 1.000 -0.060  0.060
+C(HR_Source)[T.maternal]                                 -0.055    0.087 -0.636 0.525 -0.225  0.115
+C(Conditioning)[T.mother_decel]                          -0.112    0.115 -0.978 0.328 -0.337  0.113
+C(Conditioning)[T.none]                                   0.971    0.073 13.227 0.000  0.827  1.115
+C(HR_Source)[T.maternal]:C(Conditioning)[T.mother_decel]  0.031    0.157  0.198 0.843 -0.277  0.339
+C(HR_Source)[T.maternal]:C(Conditioning)[T.none]          0.181    0.092  1.956 0.050 -0.000  0.361
+Group Var                                                 0.000    0.018                           
+===================================================================================================
+
+
+================================================================================
+SIGNIFICANT EFFECTS (sorted by p-value)
+================================================================================
+
+                                     Parameter          Coef       SE      p-value Sig
+                            Conditioning(none)  9.712730e-01 0.073432 6.145094e-40 ***
+        HR_Source(maternal):Conditioning(none)  1.805526e-01 0.092316 5.048719e-02   †
+                    Conditioning(mother_decel) -1.122355e-01 0.114711 3.278656e-01  ns
+                           HR_Source(maternal) -5.513350e-02 0.086716 5.249092e-01  ns
+HR_Source(maternal):Conditioning(mother_decel)  3.106507e-02 0.157185 8.433321e-01  ns
+                              Stress(stressed) -2.511042e-16 0.030574 1.000000e+00  ns
+                                     Sex(male)  2.053140e-16 0.033648 1.000000e+00  ns
+                                     Intercept  0.000000e+00 0.079527 1.000000e+00  ns
+
+✓ Saved to: sample_entropy_mlm_results_simplified.csv
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+CONDITIONING EFFECTS (testing bivariate coupling in SampEn):
+
+Conditioning(none)                                : β =  0.9713, p = 0.000000 ***
+HR_Source(maternal):Conditioning(none)            : β =  0.1806, p = 0.050487 †
+Conditioning(mother_decel)                        : β = -0.1122, p = 0.327866 ns
+HR_Source(maternal):Conditioning(mother_decel)    : β =  0.0311, p = 0.843332 ns
+
+DEMOGRAPHIC EFFECTS:
+
+Stress(stressed)                                  : β = -0.0000, p = 1.000000 ns
+Sex(male)                                         : β =  0.0000, p = 1.000000 ns
+
+HR SOURCE EFFECTS:
+
+HR_Source(maternal)                               : β = -0.0551, p = 0.524909 ns
+
+================================================================================
+COMPARISON: SAMPLE ENTROPY vs ENTROPY RATE (HMAX/HMEAN)
+================================================================================
+
+ENTROPY RATE (hmax/hmean) conditioning effects:
+  - Conditioning(none): β = +0.206, p < 0.001***
+  - Conditioning(mother_decel): β = -0.123, p = 0.012*
+  - Coupling strength: 60% reduction (0.123/0.206)
+
+SAMPLE ENTROPY conditioning effects (from this simplified analysis):
+  - Conditioning(none): β = +0.9713, p = 0.000 ***
+  - HR_Source(maternal):Conditioning(none): β = +0.1806, p = 0.050 †
+  - Coupling strength estimate: 12% reduction
+
+================================================================================
+DATA QUALITY LIMITATIONS
+================================================================================
+
+Sparse conditioned data in SampEn.txt:
+  - Excluded: fetus_decel (0/120, 0.0%)
+  - Excluded: fetus_accel (8/120, 6.7%)
+  - Included: mother_accel (16/120, 13.3%)
+  - Included: mother_decel (7/120, 5.8%)
+
+Comparison to entropy rate data:
+  - Entropy rate had ~1,262 observations with complete conditioning
+  - Sample entropy has only 286 observations with limited conditioning types
+
+Interpretation: Sample entropy is harder to compute reliably in short
+event windows (accelerations/decelerations), resulting in extensive zeros.
+This limits our ability to detect bivariate coupling signatures that may
+exist but cannot be measured with current data sparsity.
+

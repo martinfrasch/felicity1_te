@@ -1,0 +1,401 @@
+feature,outcome,r,p_value,n,method,x_normal,y_normal,group
+entropy_rate_fetus_full,Mother Score_PSS,-0.23529333467131044,0.07282408967124446,59,spearman,,,control
+entropy_rate_fetus_full,Mother Score PDQ,-0.037472004607683566,0.7781210359920832,59,spearman,,,control
+entropy_rate_fetus_full,Mother CORTISOL (pg/mg of maternal hair),0.05654695485717915,0.7057799372751878,47,spearman,,,control
+entropy_rate_fetus_full,COG COMPOSITE SCORE,0.0380382193738463,0.833540222889829,33,spearman,,,control
+entropy_rate_fetus_full,LANG RECEPT SCORE,0.1208454186911928,0.5172638205466331,31,spearman,,,control
+entropy_rate_fetus_full,LANG EXPRES SCORE,0.03498560616643372,0.8517831435422398,31,spearman,,,control
+entropy_rate_fetus_full,LANG COMP SCORE,0.07671348085665845,0.6816770795400824,31,spearman,,,control
+entropy_rate_fetus_full,MOTOR FINE  SKILLS SCORE,0.4162292303564575,0.019856833655453796,31,spearman,,,control
+entropy_rate_fetus_full,MOTOR GROSS SKILLS SCORE,-0.011490702963699513,0.9502307275386124,32,spearman,,,control
+entropy_rate_fetus_full,MOTOR COMPOSITE SCORE,0.3029245898064463,0.0976237998398422,31,spearman,,,control
+entropy_rate_mother_full,Mother Score_PSS,-0.10749233423519326,0.4177389921303114,59,spearman,,,control
+entropy_rate_mother_full,Mother Score PDQ,0.20324744818948112,0.1226041982938889,59,spearman,,,control
+entropy_rate_mother_full,Mother CORTISOL (pg/mg of maternal hair),0.04529616176642434,0.7624019753206963,47,spearman,,,control
+entropy_rate_mother_full,COG COMPOSITE SCORE,-0.19475568319409306,0.2774395693780908,33,spearman,,,control
+entropy_rate_mother_full,LANG RECEPT SCORE,-0.236216296602751,0.2007754110247758,31,spearman,,,control
+entropy_rate_mother_full,LANG EXPRES SCORE,-0.09966829663693327,0.5937175727579269,31,spearman,,,control
+entropy_rate_mother_full,LANG COMP SCORE,-0.17731137000114197,0.3399577434641279,31,spearman,,,control
+entropy_rate_mother_full,MOTOR FINE  SKILLS SCORE,0.006923578195753208,0.9705128493052454,31,spearman,,,control
+entropy_rate_mother_full,MOTOR GROSS SKILLS SCORE,-0.2698461857281692,0.1352763875637153,32,spearman,,,control
+entropy_rate_mother_full,MOTOR COMPOSITE SCORE,-0.14112149565280233,0.44890372865658323,31,spearman,,,control
+entropy_rate_fetus_fHR_accel,Mother Score_PSS,-0.1899489811933699,0.17741378337239144,52,spearman,,,control
+entropy_rate_fetus_fHR_accel,Mother Score PDQ,0.01606798361416684,0.9099841932641859,52,spearman,,,control
+entropy_rate_fetus_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.04089933983348691,0.7995798590551113,41,spearman,,,control
+entropy_rate_fetus_fHR_accel,COG COMPOSITE SCORE,0.024388803211103018,0.9019585228552418,28,spearman,,,control
+entropy_rate_fetus_fHR_accel,LANG RECEPT SCORE,0.06333754871314791,0.7536321647200388,27,spearman,,,control
+entropy_rate_fetus_fHR_accel,LANG EXPRES SCORE,0.14193877181641243,0.48004857194727446,27,spearman,,,control
+entropy_rate_fetus_fHR_accel,LANG COMP SCORE,0.10187312579263974,0.6131241363025293,27,spearman,,,control
+entropy_rate_fetus_fHR_accel,MOTOR FINE  SKILLS SCORE,0.4424743556953425,0.023604328162837643,26,spearman,,,control
+entropy_rate_fetus_fHR_accel,MOTOR GROSS SKILLS SCORE,0.06616622548577364,0.7429867145449589,27,spearman,,,control
+entropy_rate_fetus_fHR_accel,MOTOR COMPOSITE SCORE,0.3077237071848536,0.12618909436273112,26,spearman,,,control
+entropy_rate_mother_fHR_accel,Mother Score_PSS,-0.07444698631851931,0.5999144715613298,52,spearman,,,control
+entropy_rate_mother_fHR_accel,Mother Score PDQ,0.22328070030246241,0.1115825290166026,52,spearman,,,control
+entropy_rate_mother_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.007524770315684821,0.9627582264549405,41,spearman,,,control
+entropy_rate_mother_fHR_accel,COG COMPOSITE SCORE,-0.08425222927471952,0.6699225981055132,28,spearman,,,control
+entropy_rate_mother_fHR_accel,LANG RECEPT SCORE,-0.24627852679238582,0.21559422469110281,27,spearman,,,control
+entropy_rate_mother_fHR_accel,LANG EXPRES SCORE,-0.15117556824698156,0.4516283936804524,27,spearman,,,control
+entropy_rate_mother_fHR_accel,LANG COMP SCORE,-0.22522552509577584,0.2586799113242428,27,spearman,,,control
+entropy_rate_mother_fHR_accel,MOTOR FINE  SKILLS SCORE,-0.11476678600847945,0.5766617528788733,26,spearman,,,control
+entropy_rate_mother_fHR_accel,MOTOR GROSS SKILLS SCORE,-0.3369861251484751,0.08563961371985009,27,spearman,,,control
+entropy_rate_mother_fHR_accel,MOTOR COMPOSITE SCORE,-0.2908762639981968,0.1494076026965222,26,spearman,,,control
+entropy_rate_fetus_fHR_decel,Mother Score_PSS,-0.32012458958919043,0.09046015646344455,29,spearman,,,control
+entropy_rate_fetus_fHR_decel,Mother Score PDQ,0.013371490717167938,0.9451144552654489,29,spearman,,,control
+entropy_rate_fetus_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),0.2967398369407143,0.17991117941332718,22,spearman,,,control
+entropy_rate_fetus_fHR_decel,COG COMPOSITE SCORE,0.08027598955187747,0.7850064117620124,14,spearman,,,control
+entropy_rate_fetus_fHR_decel,LANG RECEPT SCORE,0.01775893261367352,0.9519512741512404,14,spearman,,,control
+entropy_rate_fetus_fHR_decel,LANG EXPRES SCORE,0.07964777204030019,0.7866533392551567,14,spearman,,,control
+entropy_rate_fetus_fHR_decel,LANG COMP SCORE,-0.05286356436091443,0.8575609657782647,14,spearman,,,control
+entropy_rate_fetus_fHR_decel,MOTOR FINE  SKILLS SCORE,0.3944687951216565,0.1822582195406569,13,spearman,,,control
+entropy_rate_fetus_fHR_decel,MOTOR GROSS SKILLS SCORE,-0.3504892155111609,0.21922695495266553,14,spearman,,,control
+entropy_rate_fetus_fHR_decel,MOTOR COMPOSITE SCORE,0.08101696582351595,0.7924665671337701,13,spearman,,,control
+entropy_rate_mother_fHR_decel,Mother Score_PSS,0.07135904164217248,0.7129878693242808,29,spearman,,,control
+entropy_rate_mother_fHR_decel,Mother Score PDQ,0.2374677703289639,0.21483195517109654,29,spearman,,,control
+entropy_rate_mother_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),-0.03730771644322326,0.8690769439115966,22,spearman,,,control
+entropy_rate_mother_fHR_decel,COG COMPOSITE SCORE,-0.07581621235455095,0.7967158397711386,14,spearman,,,control
+entropy_rate_mother_fHR_decel,LANG RECEPT SCORE,-0.3462991859666336,0.22516604375740307,14,spearman,,,control
+entropy_rate_mother_fHR_decel,LANG EXPRES SCORE,-0.33850303117127584,0.2364793976841277,14,spearman,,,control
+entropy_rate_mother_fHR_decel,LANG COMP SCORE,-0.42290851488731546,0.13191394192253933,14,spearman,,,control
+entropy_rate_mother_fHR_decel,MOTOR FINE  SKILLS SCORE,-0.4944749685327807,0.08584588953358648,13,spearman,,,control
+entropy_rate_mother_fHR_decel,MOTOR GROSS SKILLS SCORE,-0.43755341554259575,0.11766627654498554,14,spearman,,,control
+entropy_rate_mother_fHR_decel,MOTOR COMPOSITE SCORE,-0.7934075273751217,0.001208386195639494,13,spearman,,,control
+entropy_rate_fetus_mHR_accel,Mother Score_PSS,-0.2092805681885702,0.12162540815645176,56,spearman,,,control
+entropy_rate_fetus_mHR_accel,Mother Score PDQ,0.002267409654912216,0.9867676470967268,56,spearman,,,control
+entropy_rate_fetus_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.016447419160083597,0.91560924005381,44,spearman,,,control
+entropy_rate_fetus_mHR_accel,COG COMPOSITE SCORE,0.07216932019542857,0.6946731501467311,32,spearman,,,control
+entropy_rate_fetus_mHR_accel,LANG RECEPT SCORE,0.15436483038235155,0.41537938998676727,30,spearman,,,control
+entropy_rate_fetus_mHR_accel,LANG EXPRES SCORE,0.10966941867353788,0.5640037457822785,30,spearman,,,control
+entropy_rate_fetus_mHR_accel,LANG COMP SCORE,0.14298609609240587,0.45098432210860384,30,spearman,,,control
+entropy_rate_fetus_mHR_accel,MOTOR FINE  SKILLS SCORE,0.38180929738446434,0.0373413630664567,30,spearman,,,control
+entropy_rate_fetus_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.014052236227257268,0.9401925166336117,31,spearman,,,control
+entropy_rate_fetus_mHR_accel,MOTOR COMPOSITE SCORE,0.26094226350121036,0.1636873891762432,30,spearman,,,control
+entropy_rate_mother_mHR_accel,Mother Score_PSS,-0.12313444732732907,0.36593271993813425,56,spearman,,,control
+entropy_rate_mother_mHR_accel,Mother Score PDQ,0.24649491324235076,0.06704589535013586,56,spearman,,,control
+entropy_rate_mother_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.1494507914156514,0.33291578249957066,44,spearman,,,control
+entropy_rate_mother_mHR_accel,COG COMPOSITE SCORE,-0.0053802320968314365,0.9766855816955842,32,spearman,,,control
+entropy_rate_mother_mHR_accel,LANG RECEPT SCORE,-0.08814455531977755,0.6432378206781308,30,spearman,,,control
+entropy_rate_mother_mHR_accel,LANG EXPRES SCORE,0.10069850508061044,0.5964854848234571,30,spearman,,,control
+entropy_rate_mother_mHR_accel,LANG COMP SCORE,0.013851778058951816,0.9420855677783729,30,spearman,,,control
+entropy_rate_mother_mHR_accel,MOTOR FINE  SKILLS SCORE,0.1569510539307162,0.40751205701295357,30,spearman,,,control
+entropy_rate_mother_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.22626136881859166,0.22097118956046125,31,spearman,,,control
+entropy_rate_mother_mHR_accel,MOTOR COMPOSITE SCORE,-0.03535924325316573,0.852837722293688,30,spearman,,,control
+entropy_rate_fetus_mHR_decel,Mother Score_PSS,-0.2542213192390396,0.06359182745152366,54,spearman,,,control
+entropy_rate_fetus_mHR_decel,Mother Score PDQ,0.005472996456168774,0.9686692581338161,54,spearman,,,control
+entropy_rate_fetus_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),0.11031484898264558,0.48675846180599147,42,spearman,,,control
+entropy_rate_fetus_mHR_decel,COG COMPOSITE SCORE,0.039782466513003385,0.8317318466753825,31,spearman,,,control
+entropy_rate_fetus_mHR_decel,LANG RECEPT SCORE,0.19960672675864227,0.29921140821550674,29,spearman,,,control
+entropy_rate_fetus_mHR_decel,LANG EXPRES SCORE,0.1868862066594696,0.3316817006755498,29,spearman,,,control
+entropy_rate_fetus_mHR_decel,LANG COMP SCORE,0.2229670772980734,0.2449893337643557,29,spearman,,,control
+entropy_rate_fetus_mHR_decel,MOTOR FINE  SKILLS SCORE,0.38359333748241087,0.03995815113492763,29,spearman,,,control
+entropy_rate_fetus_mHR_decel,MOTOR GROSS SKILLS SCORE,0.06523855123109511,0.731968554420731,30,spearman,,,control
+entropy_rate_fetus_mHR_decel,MOTOR COMPOSITE SCORE,0.3192130662797526,0.09143332190983772,29,spearman,,,control
+entropy_rate_mother_mHR_decel,Mother Score_PSS,-0.2510096196126177,0.067129017219839,54,spearman,,,control
+entropy_rate_mother_mHR_decel,Mother Score PDQ,0.205792321292444,0.13546219254700473,54,spearman,,,control
+entropy_rate_mother_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),0.2402083214238069,0.12545317238110573,42,spearman,,,control
+entropy_rate_mother_mHR_decel,COG COMPOSITE SCORE,-0.03488616294217219,0.8521998314041691,31,spearman,,,control
+entropy_rate_mother_mHR_decel,LANG RECEPT SCORE,-0.17360336905435264,0.3677875167737863,29,spearman,,,control
+entropy_rate_mother_mHR_decel,LANG EXPRES SCORE,0.07107640306463871,0.714077373465475,29,spearman,,,control
+entropy_rate_mother_mHR_decel,LANG COMP SCORE,-0.0591444300491005,0.7605494891423177,29,spearman,,,control
+entropy_rate_mother_mHR_decel,MOTOR FINE  SKILLS SCORE,-0.006472048523389151,0.9734192281721004,29,spearman,,,control
+entropy_rate_mother_mHR_decel,MOTOR GROSS SKILLS SCORE,-0.18311786449003933,0.3327533817942545,30,spearman,,,control
+entropy_rate_mother_mHR_decel,MOTOR COMPOSITE SCORE,-0.13655776360259603,0.4799654344410954,29,spearman,,,control
+sampen_fetus_full,Mother Score_PSS,-0.03815567589264494,0.774178912731825,59,spearman,,,control
+sampen_fetus_full,Mother Score PDQ,-0.09585315285225637,0.4701873505055082,59,spearman,,,control
+sampen_fetus_full,Mother CORTISOL (pg/mg of maternal hair),-0.17438729290669963,0.24105442420728346,47,spearman,,,control
+sampen_fetus_full,COG COMPOSITE SCORE,-0.020456109085490677,0.9100369020619063,33,spearman,,,control
+sampen_fetus_full,LANG RECEPT SCORE,0.27798501514366664,0.12998134453245852,31,spearman,,,control
+sampen_fetus_full,LANG EXPRES SCORE,-0.07790399512641927,0.6769999019019108,31,spearman,,,control
+sampen_fetus_full,LANG COMP SCORE,0.12610157935012722,0.49906754341772164,31,spearman,,,control
+sampen_fetus_full,MOTOR FINE  SKILLS SCORE,0.39790211160299316,0.026634843930714677,31,spearman,,,control
+sampen_fetus_full,MOTOR GROSS SKILLS SCORE,-0.019274727552012084,0.91660923245016,32,spearman,,,control
+sampen_fetus_full,MOTOR COMPOSITE SCORE,0.32360618830728805,0.07575688097161973,31,spearman,,,control
+sampen_mother_full,Mother Score_PSS,-0.16027142200988875,0.22528849364425582,59,spearman,,,control
+sampen_mother_full,Mother Score PDQ,0.023581520141042242,0.8592867733943778,59,spearman,,,control
+sampen_mother_full,Mother CORTISOL (pg/mg of maternal hair),-0.009492856670324375,0.949504778400903,47,spearman,,,control
+sampen_mother_full,COG COMPOSITE SCORE,-0.20692791339372388,0.24791257135956885,33,spearman,,,control
+sampen_mother_full,LANG RECEPT SCORE,-0.12104817946080887,0.516555904147653,31,spearman,,,control
+sampen_mother_full,LANG EXPRES SCORE,-0.18530166986989025,0.31828134100377165,31,spearman,,,control
+sampen_mother_full,LANG COMP SCORE,-0.1429016292474957,0.44314404207088576,31,spearman,,,control
+sampen_mother_full,MOTOR FINE  SKILLS SCORE,-0.04642870084210974,0.804123090600978,31,spearman,,,control
+sampen_mother_full,MOTOR GROSS SKILLS SCORE,-0.21331934050351836,0.2410929978327953,32,spearman,,,control
+sampen_mother_full,MOTOR COMPOSITE SCORE,-0.14842088335898174,0.42554314759307277,31,spearman,,,control
+sampen_fetus_fHR_accel,Mother Score_PSS,0.12300182978920476,0.35335007456991596,59,spearman,,,control
+sampen_fetus_fHR_accel,Mother Score PDQ,-0.03209908976741836,0.8092880729776274,59,spearman,,,control
+sampen_fetus_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.12737943130694332,0.3935275081812408,47,spearman,,,control
+sampen_fetus_fHR_accel,COG COMPOSITE SCORE,0.15025205434806288,0.40394038230418805,33,spearman,,,control
+sampen_fetus_fHR_accel,LANG RECEPT SCORE,0.30792946375633806,0.09193969961253715,31,spearman,,,control
+sampen_fetus_fHR_accel,LANG EXPRES SCORE,0.20593824704974192,0.26636939223556677,31,spearman,,,control
+sampen_fetus_fHR_accel,LANG COMP SCORE,0.3073971197487565,0.09253203534763157,31,spearman,,,control
+sampen_fetus_fHR_accel,MOTOR FINE  SKILLS SCORE,0.22678818497586148,0.21986911264826764,31,spearman,,,control
+sampen_fetus_fHR_accel,MOTOR GROSS SKILLS SCORE,-0.1671937948996834,0.36038969186841807,32,spearman,,,control
+sampen_fetus_fHR_accel,MOTOR COMPOSITE SCORE,0.11290747004399061,0.5453467796940747,31,spearman,,,control
+sampen_mother_fHR_accel,Mother Score_PSS,0.12300182978920476,0.35335007456991596,59,spearman,,,control
+sampen_mother_fHR_accel,Mother Score PDQ,-0.03209908976741836,0.8092880729776274,59,spearman,,,control
+sampen_mother_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.12737943130694332,0.3935275081812408,47,spearman,,,control
+sampen_mother_fHR_accel,COG COMPOSITE SCORE,0.15025205434806288,0.40394038230418805,33,spearman,,,control
+sampen_mother_fHR_accel,LANG RECEPT SCORE,0.30792946375633806,0.09193969961253715,31,spearman,,,control
+sampen_mother_fHR_accel,LANG EXPRES SCORE,0.20593824704974192,0.26636939223556677,31,spearman,,,control
+sampen_mother_fHR_accel,LANG COMP SCORE,0.3073971197487565,0.09253203534763157,31,spearman,,,control
+sampen_mother_fHR_accel,MOTOR FINE  SKILLS SCORE,0.22678818497586148,0.21986911264826764,31,spearman,,,control
+sampen_mother_fHR_accel,MOTOR GROSS SKILLS SCORE,-0.1671937948996834,0.36038969186841807,32,spearman,,,control
+sampen_mother_fHR_accel,MOTOR COMPOSITE SCORE,0.11290747004399061,0.5453467796940747,31,spearman,,,control
+sampen_fetus_fHR_decel,Mother Score_PSS,,,59,spearman,,,control
+sampen_fetus_fHR_decel,Mother Score PDQ,,,59,spearman,,,control
+sampen_fetus_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),,,47,spearman,,,control
+sampen_fetus_fHR_decel,COG COMPOSITE SCORE,,,33,spearman,,,control
+sampen_fetus_fHR_decel,LANG RECEPT SCORE,,,31,spearman,,,control
+sampen_fetus_fHR_decel,LANG EXPRES SCORE,,,31,spearman,,,control
+sampen_fetus_fHR_decel,LANG COMP SCORE,,,31,spearman,,,control
+sampen_fetus_fHR_decel,MOTOR FINE  SKILLS SCORE,,,31,spearman,,,control
+sampen_fetus_fHR_decel,MOTOR GROSS SKILLS SCORE,,,32,spearman,,,control
+sampen_fetus_fHR_decel,MOTOR COMPOSITE SCORE,,,31,spearman,,,control
+sampen_mother_fHR_decel,Mother Score_PSS,,,59,spearman,,,control
+sampen_mother_fHR_decel,Mother Score PDQ,,,59,spearman,,,control
+sampen_mother_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),,,47,spearman,,,control
+sampen_mother_fHR_decel,COG COMPOSITE SCORE,,,33,spearman,,,control
+sampen_mother_fHR_decel,LANG RECEPT SCORE,,,31,spearman,,,control
+sampen_mother_fHR_decel,LANG EXPRES SCORE,,,31,spearman,,,control
+sampen_mother_fHR_decel,LANG COMP SCORE,,,31,spearman,,,control
+sampen_mother_fHR_decel,MOTOR FINE  SKILLS SCORE,,,31,spearman,,,control
+sampen_mother_fHR_decel,MOTOR GROSS SKILLS SCORE,,,32,spearman,,,control
+sampen_mother_fHR_decel,MOTOR COMPOSITE SCORE,,,31,spearman,,,control
+sampen_fetus_mHR_accel,Mother Score_PSS,-0.07007155569932323,0.5979416931400292,59,spearman,,,control
+sampen_fetus_mHR_accel,Mother Score PDQ,-0.09795022911669182,0.4604842612212785,59,spearman,,,control
+sampen_fetus_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.13289123592312854,0.3732069043289188,47,spearman,,,control
+sampen_fetus_mHR_accel,COG COMPOSITE SCORE,0.24716413359376735,0.1655247196615502,33,spearman,,,control
+sampen_fetus_mHR_accel,LANG RECEPT SCORE,0.11344133421605569,0.5434358448137704,31,spearman,,,control
+sampen_fetus_mHR_accel,LANG EXPRES SCORE,-0.12916132000999062,0.48862551884755556,31,spearman,,,control
+sampen_fetus_mHR_accel,LANG COMP SCORE,-0.005905425503381456,0.9748476291907652,31,spearman,,,control
+sampen_fetus_mHR_accel,MOTOR FINE  SKILLS SCORE,-0.2073515227368172,0.26302929760984217,31,spearman,,,control
+sampen_fetus_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.20768281588759938,0.25404483012056295,32,spearman,,,control
+sampen_fetus_mHR_accel,MOTOR COMPOSITE SCORE,-0.30327147598326015,0.09722146142508359,31,spearman,,,control
+sampen_mother_mHR_accel,Mother Score_PSS,-0.07056397703241757,0.5953647236138517,59,spearman,,,control
+sampen_mother_mHR_accel,Mother Score PDQ,-0.09005499654305418,0.4975779966147431,59,spearman,,,control
+sampen_mother_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.1381710897409498,0.35434258618985914,47,spearman,,,control
+sampen_mother_mHR_accel,COG COMPOSITE SCORE,0.24716413359376735,0.1655247196615502,33,spearman,,,control
+sampen_mother_mHR_accel,LANG RECEPT SCORE,0.11344133421605569,0.5434358448137704,31,spearman,,,control
+sampen_mother_mHR_accel,LANG EXPRES SCORE,-0.12916132000999062,0.48862551884755556,31,spearman,,,control
+sampen_mother_mHR_accel,LANG COMP SCORE,-0.005905425503381456,0.9748476291907652,31,spearman,,,control
+sampen_mother_mHR_accel,MOTOR FINE  SKILLS SCORE,-0.2073515227368172,0.26302929760984217,31,spearman,,,control
+sampen_mother_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.20768281588759938,0.25404483012056295,32,spearman,,,control
+sampen_mother_mHR_accel,MOTOR COMPOSITE SCORE,-0.30327147598326015,0.09722146142508359,31,spearman,,,control
+sampen_fetus_mHR_decel,Mother Score_PSS,-0.1342051812466996,0.31087540420928195,59,spearman,,,control
+sampen_fetus_mHR_decel,Mother Score PDQ,-0.20934628580118786,0.11154151778377057,59,spearman,,,control
+sampen_fetus_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),-0.0714898794614335,0.6329888827677667,47,spearman,,,control
+sampen_fetus_mHR_decel,COG COMPOSITE SCORE,0.1630633538117519,0.3645662781050929,33,spearman,,,control
+sampen_fetus_mHR_decel,LANG RECEPT SCORE,0.18992249642753198,0.3061466576420647,31,spearman,,,control
+sampen_fetus_mHR_decel,LANG EXPRES SCORE,-0.02865047258448961,0.8784022773140858,31,spearman,,,control
+sampen_fetus_mHR_decel,LANG COMP SCORE,0.0864815471957677,0.6436582898231133,31,spearman,,,control
+sampen_fetus_mHR_decel,MOTOR FINE  SKILLS SCORE,-0.21647963111332233,0.2421174142398463,31,spearman,,,control
+sampen_fetus_mHR_decel,MOTOR GROSS SKILLS SCORE,-0.2049030279691408,0.2605983858402543,32,spearman,,,control
+sampen_fetus_mHR_decel,MOTOR COMPOSITE SCORE,-0.30792946375633806,0.09193969961253715,31,spearman,,,control
+sampen_mother_mHR_decel,Mother Score_PSS,-0.1342051812466996,0.31087540420928195,59,spearman,,,control
+sampen_mother_mHR_decel,Mother Score PDQ,-0.20934628580118786,0.11154151778377057,59,spearman,,,control
+sampen_mother_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),-0.0714898794614335,0.6329888827677667,47,spearman,,,control
+sampen_mother_mHR_decel,COG COMPOSITE SCORE,0.1630633538117519,0.3645662781050929,33,spearman,,,control
+sampen_mother_mHR_decel,LANG RECEPT SCORE,0.18992249642753198,0.3061466576420647,31,spearman,,,control
+sampen_mother_mHR_decel,LANG EXPRES SCORE,-0.02865047258448961,0.8784022773140858,31,spearman,,,control
+sampen_mother_mHR_decel,LANG COMP SCORE,0.0864815471957677,0.6436582898231133,31,spearman,,,control
+sampen_mother_mHR_decel,MOTOR FINE  SKILLS SCORE,-0.21647963111332233,0.2421174142398463,31,spearman,,,control
+sampen_mother_mHR_decel,MOTOR GROSS SKILLS SCORE,-0.2049030279691408,0.2605983858402543,32,spearman,,,control
+sampen_mother_mHR_decel,MOTOR COMPOSITE SCORE,-0.30792946375633806,0.09193969961253715,31,spearman,,,control
+entropy_rate_fetus_full,Mother Score_PSS,-0.16037904445782145,0.2249730848970484,59,spearman,,,stressed
+entropy_rate_fetus_full,Mother Score PDQ,0.09292806267898125,0.48390319699126727,59,spearman,,,stressed
+entropy_rate_fetus_full,Mother CORTISOL (pg/mg of maternal hair),0.08907578864792373,0.5700158636566623,43,spearman,,,stressed
+entropy_rate_fetus_full,COG COMPOSITE SCORE,-0.1602068637020797,0.3810913268106133,32,spearman,,,stressed
+entropy_rate_fetus_full,LANG RECEPT SCORE,-0.2326087481692148,0.23359192600673603,28,spearman,,,stressed
+entropy_rate_fetus_full,LANG EXPRES SCORE,-0.16563727190651914,0.3995914627442706,28,spearman,,,stressed
+entropy_rate_fetus_full,LANG COMP SCORE,-0.17787124576028196,0.3651765844444381,28,spearman,,,stressed
+entropy_rate_fetus_full,MOTOR FINE  SKILLS SCORE,-0.043928729049962416,0.8113174696469803,32,spearman,,,stressed
+entropy_rate_fetus_full,MOTOR GROSS SKILLS SCORE,-0.14727655603761144,0.4211798775699621,32,spearman,,,stressed
+entropy_rate_fetus_full,MOTOR COMPOSITE SCORE,-0.14441449559770783,0.43035969622235826,32,spearman,,,stressed
+entropy_rate_mother_full,Mother Score_PSS,0.05312574263410841,0.6894379353633773,59,spearman,,,stressed
+entropy_rate_mother_full,Mother Score PDQ,0.10114997250668709,0.4458916181935775,59,spearman,,,stressed
+entropy_rate_mother_full,Mother CORTISOL (pg/mg of maternal hair),0.23922563119463633,0.12234329340313838,43,spearman,,,stressed
+entropy_rate_mother_full,COG COMPOSITE SCORE,-0.0054149173046157476,0.976535319615103,32,spearman,,,stressed
+entropy_rate_mother_full,LANG RECEPT SCORE,-0.1777637945132033,0.36547103884713716,28,spearman,,,stressed
+entropy_rate_mother_full,LANG EXPRES SCORE,-0.07153769218553983,0.7175408342902201,28,spearman,,,stressed
+entropy_rate_mother_full,LANG COMP SCORE,-0.06927906326366468,0.7261150649881719,28,spearman,,,stressed
+entropy_rate_mother_full,MOTOR FINE  SKILLS SCORE,0.06275532721423202,0.7329451854859708,32,spearman,,,stressed
+entropy_rate_mother_full,MOTOR GROSS SKILLS SCORE,-0.01963687413834819,0.9150480105529453,32,spearman,,,stressed
+entropy_rate_mother_full,MOTOR COMPOSITE SCORE,0.04168285568975986,0.8208041445210824,32,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,Mother Score_PSS,0.0936304673487941,0.5134233503129255,51,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,Mother Score PDQ,0.18847594819572627,0.18532860088175018,51,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.0026347701865804115,0.9874743168386468,38,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,COG COMPOSITE SCORE,-0.15543553984313802,0.42074020328186246,29,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,LANG RECEPT SCORE,-0.2599837977481964,0.2094476980093318,25,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,LANG EXPRES SCORE,-0.054620809918352,0.7953918236325841,25,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,LANG COMP SCORE,-0.06809950289259126,0.7463612618489579,25,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,MOTOR FINE  SKILLS SCORE,-0.22911497830386093,0.23187882448693992,29,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,MOTOR GROSS SKILLS SCORE,-0.07083577791075989,0.7150053594933512,29,spearman,,,stressed
+entropy_rate_fetus_fHR_accel,MOTOR COMPOSITE SCORE,-0.26108205413107954,0.17131545432831863,29,spearman,,,stressed
+entropy_rate_mother_fHR_accel,Mother Score_PSS,0.10711689962871773,0.45436382006879206,51,spearman,,,stressed
+entropy_rate_mother_fHR_accel,Mother Score PDQ,0.07268944960469943,0.6122189034405341,51,spearman,,,stressed
+entropy_rate_mother_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.22208917031050718,0.18020537738320475,38,spearman,,,stressed
+entropy_rate_mother_fHR_accel,COG COMPOSITE SCORE,0.03325363251101171,0.8640301200740873,29,spearman,,,stressed
+entropy_rate_mother_fHR_accel,LANG RECEPT SCORE,-0.10422599343407575,0.6200326790654092,25,spearman,,,stressed
+entropy_rate_mother_fHR_accel,LANG EXPRES SCORE,-0.004261197936892709,0.9838716856527254,25,spearman,,,stressed
+entropy_rate_mother_fHR_accel,LANG COMP SCORE,0.025150384591013812,0.9050120122060861,25,spearman,,,stressed
+entropy_rate_mother_fHR_accel,MOTOR FINE  SKILLS SCORE,0.06595734223899027,0.733903414463234,29,spearman,,,stressed
+entropy_rate_mother_fHR_accel,MOTOR GROSS SKILLS SCORE,-0.011425125469477401,0.9530942128738152,29,spearman,,,stressed
+entropy_rate_mother_fHR_accel,MOTOR COMPOSITE SCORE,0.08735825385374525,0.6522717725712828,29,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,Mother Score_PSS,-0.027373476667575215,0.8798072804987509,33,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,Mother Score PDQ,0.12940507142953483,0.4729184457884008,33,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),0.20393269664968047,0.3281795168983719,25,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,COG COMPOSITE SCORE,-0.09089882993440798,0.687462654603037,22,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,LANG RECEPT SCORE,-0.28408811019042174,0.25324984766315967,18,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,LANG EXPRES SCORE,0.01763509198375155,0.9446291435742475,18,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,LANG COMP SCORE,-0.03534397104390224,0.8892690398127201,18,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,MOTOR FINE  SKILLS SCORE,0.013079659424660854,0.9539316975384359,22,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,MOTOR GROSS SKILLS SCORE,-0.18916268994832222,0.3991659175320401,22,spearman,,,stressed
+entropy_rate_fetus_fHR_decel,MOTOR COMPOSITE SCORE,-0.12457678497589494,0.5806958851181967,22,spearman,,,stressed
+entropy_rate_mother_fHR_decel,Mother Score_PSS,0.2855628121493958,0.1071954100109255,33,spearman,,,stressed
+entropy_rate_mother_fHR_decel,Mother Score PDQ,0.1736003351519115,0.33396012415246246,33,spearman,,,stressed
+entropy_rate_mother_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),0.39707122410051215,0.049371256481122526,25,spearman,,,stressed
+entropy_rate_mother_fHR_decel,COG COMPOSITE SCORE,0.003451854301306632,0.987836303768699,22,spearman,,,stressed
+entropy_rate_mother_fHR_decel,LANG RECEPT SCORE,-0.2436522112947048,0.32990447381657884,18,spearman,,,stressed
+entropy_rate_mother_fHR_decel,LANG EXPRES SCORE,-0.18672450335736934,0.4581511876955968,18,spearman,,,stressed
+entropy_rate_mother_fHR_decel,LANG COMP SCORE,-0.1476130555362976,0.5588666192823362,18,spearman,,,stressed
+entropy_rate_mother_fHR_decel,MOTOR FINE  SKILLS SCORE,0.03923897827398257,0.8623605088206122,22,spearman,,,stressed
+entropy_rate_mother_fHR_decel,MOTOR GROSS SKILLS SCORE,-0.09487599090866006,0.6744990168338405,22,spearman,,,stressed
+entropy_rate_mother_fHR_decel,MOTOR COMPOSITE SCORE,-0.05517784540028223,0.807319619061996,22,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,Mother Score_PSS,-0.09722362879088997,0.4759467073241066,56,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,Mother Score PDQ,0.10249662393327111,0.45223271959006583,56,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.014061180471279118,0.9304685598198014,41,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,COG COMPOSITE SCORE,-0.11726096783788584,0.5227266698395725,32,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,LANG RECEPT SCORE,-0.23729399546646202,0.22404081209082227,28,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,LANG EXPRES SCORE,-0.1458268340705235,0.45903659260975593,28,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,LANG COMP SCORE,-0.16385048295692123,0.4047666469191942,28,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,MOTOR FINE  SKILLS SCORE,-0.03986809023021799,0.8284880794707278,32,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.12348572775461267,0.5007354854498807,32,spearman,,,stressed
+entropy_rate_fetus_mHR_accel,MOTOR COMPOSITE SCORE,-0.13648368677178008,0.4563642448444225,32,spearman,,,stressed
+entropy_rate_mother_mHR_accel,Mother Score_PSS,0.13465971965015225,0.3224239130949196,56,spearman,,,stressed
+entropy_rate_mother_mHR_accel,Mother Score PDQ,0.005064941683513898,0.970446812203493,56,spearman,,,stressed
+entropy_rate_mother_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),0.1848040861939541,0.24738449282275135,41,spearman,,,stressed
+entropy_rate_mother_mHR_accel,COG COMPOSITE SCORE,-0.02894179938673934,0.8750568740584949,32,spearman,,,stressed
+entropy_rate_mother_mHR_accel,LANG RECEPT SCORE,-0.21634818401994507,0.2688247818028659,28,spearman,,,stressed
+entropy_rate_mother_mHR_accel,LANG EXPRES SCORE,-0.07016196733581792,0.7227594641591442,28,spearman,,,stressed
+entropy_rate_mother_mHR_accel,LANG COMP SCORE,-0.08000082305446994,0.6857171780989239,28,spearman,,,stressed
+entropy_rate_mother_mHR_accel,MOTOR FINE  SKILLS SCORE,0.13104788918266097,0.4746603653273407,32,spearman,,,stressed
+entropy_rate_mother_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.020203322430800544,0.9126066652273026,32,spearman,,,stressed
+entropy_rate_mother_mHR_accel,MOTOR COMPOSITE SCORE,0.12301975550915852,0.5023654151495882,32,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,Mother Score_PSS,-0.048719582325874596,0.7264549563587686,54,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,Mother Score PDQ,0.11026726842041254,0.42733487440612083,54,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),-0.04515538911135129,0.7820313034435562,40,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,COG COMPOSITE SCORE,-0.1222352643270857,0.5124208971782238,31,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,LANG RECEPT SCORE,-0.1699748653277083,0.3966520017990116,27,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,LANG EXPRES SCORE,-0.12097227639895543,0.5477996987389031,27,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,LANG COMP SCORE,-0.1015349652371012,0.6143092544536153,27,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,MOTOR FINE  SKILLS SCORE,-0.0367371747512051,0.8444502275688739,31,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,MOTOR GROSS SKILLS SCORE,-0.10271011651055742,0.5824408208068068,31,spearman,,,stressed
+entropy_rate_fetus_mHR_decel,MOTOR COMPOSITE SCORE,-0.10248827696000704,0.5832600219298423,31,spearman,,,stressed
+entropy_rate_mother_mHR_decel,Mother Score_PSS,0.12699353485258522,0.3601472694704033,54,spearman,,,stressed
+entropy_rate_mother_mHR_decel,Mother Score PDQ,0.03610690063195232,0.7954759053741352,54,spearman,,,stressed
+entropy_rate_mother_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),0.07911600467218008,0.6274858442588231,40,spearman,,,stressed
+entropy_rate_mother_mHR_decel,COG COMPOSITE SCORE,0.01193542985011948,0.949189250041756,31,spearman,,,stressed
+entropy_rate_mother_mHR_decel,LANG RECEPT SCORE,-0.11434113906312386,0.5701108721692494,27,spearman,,,stressed
+entropy_rate_mother_mHR_decel,LANG EXPRES SCORE,-0.08320681955359625,0.6798897106679824,27,spearman,,,stressed
+entropy_rate_mother_mHR_decel,LANG COMP SCORE,-0.02607393367115892,0.8972826110808716,27,spearman,,,stressed
+entropy_rate_mother_mHR_decel,MOTOR FINE  SKILLS SCORE,0.09153848515355524,0.624310232828923,31,spearman,,,stressed
+entropy_rate_mother_mHR_decel,MOTOR GROSS SKILLS SCORE,-0.10500182296413985,0.5740080354698642,31,spearman,,,stressed
+entropy_rate_mother_mHR_decel,MOTOR COMPOSITE SCORE,0.06271064867453896,0.737519608031109,31,spearman,,,stressed
+sampen_fetus_full,Mother Score_PSS,-0.1338309057371716,0.31223906517939004,59,spearman,,,stressed
+sampen_fetus_full,Mother Score PDQ,0.02235423170237458,0.8665414164081483,59,spearman,,,stressed
+sampen_fetus_full,Mother CORTISOL (pg/mg of maternal hair),0.12071018087802751,0.44067687362318086,43,spearman,,,stressed
+sampen_fetus_full,COG COMPOSITE SCORE,-0.02707458652307874,0.8830607962546667,32,spearman,,,stressed
+sampen_fetus_full,LANG RECEPT SCORE,-0.20119003099943933,0.3046061915319742,28,spearman,,,stressed
+sampen_fetus_full,LANG EXPRES SCORE,-0.10730653827830974,0.5867866530064809,28,spearman,,,stressed
+sampen_fetus_full,LANG COMP SCORE,-0.08879816442128449,0.6531845795653161,28,spearman,,,stressed
+sampen_fetus_full,MOTOR FINE  SKILLS SCORE,-0.2325638596762716,0.200233636911035,32,spearman,,,stressed
+sampen_fetus_full,MOTOR GROSS SKILLS SCORE,0.039840196569148736,0.828606308112183,32,spearman,,,stressed
+sampen_fetus_full,MOTOR COMPOSITE SCORE,-0.23349776682847778,0.19838133397986285,32,spearman,,,stressed
+sampen_mother_full,Mother Score_PSS,0.13058973452821324,0.32420834117252073,59,spearman,,,stressed
+sampen_mother_full,Mother Score PDQ,0.13084833006939678,0.32324283993813296,59,spearman,,,stressed
+sampen_mother_full,Mother CORTISOL (pg/mg of maternal hair),-0.09164892103027668,0.558880386913014,43,spearman,,,stressed
+sampen_mother_full,COG COMPOSITE SCORE,0.3766168346003435,0.033616782152587524,32,spearman,,,stressed
+sampen_mother_full,LANG RECEPT SCORE,0.05953020095325877,0.763483591113963,28,spearman,,,stressed
+sampen_mother_full,LANG EXPRES SCORE,0.25148250252916693,0.19673338732727882,28,spearman,,,stressed
+sampen_mother_full,LANG COMP SCORE,0.22130811875892886,0.2577330913806316,28,spearman,,,stressed
+sampen_mother_full,MOTOR FINE  SKILLS SCORE,0.08139735088669506,0.6578600824067423,32,spearman,,,stressed
+sampen_mother_full,MOTOR GROSS SKILLS SCORE,0.019448058040864073,0.9158619624616345,32,spearman,,,stressed
+sampen_mother_full,MOTOR COMPOSITE SCORE,0.16617811051537007,0.3633566968705949,32,spearman,,,stressed
+sampen_fetus_fHR_accel,Mother Score_PSS,0.01404684322380227,0.915905705601517,59,spearman,,,stressed
+sampen_fetus_fHR_accel,Mother Score PDQ,-0.25983902558390665,0.04687378640371971,59,spearman,,,stressed
+sampen_fetus_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.20850704162363393,0.1796658798927662,43,spearman,,,stressed
+sampen_fetus_fHR_accel,COG COMPOSITE SCORE,0.043823347454305106,0.8117620301099727,32,spearman,,,stressed
+sampen_fetus_fHR_accel,LANG RECEPT SCORE,0.3313434504609303,0.08499585072373046,28,spearman,,,stressed
+sampen_fetus_fHR_accel,LANG EXPRES SCORE,0.2812048889238034,0.1471716299387646,28,spearman,,,stressed
+sampen_fetus_fHR_accel,LANG COMP SCORE,0.09417018080332007,0.6336151497410358,28,spearman,,,stressed
+sampen_fetus_fHR_accel,MOTOR FINE  SKILLS SCORE,0.057392835283042065,0.7550381211454686,32,spearman,,,stressed
+sampen_fetus_fHR_accel,MOTOR GROSS SKILLS SCORE,0.05353791645052007,0.7710394761331457,32,spearman,,,stressed
+sampen_fetus_fHR_accel,MOTOR COMPOSITE SCORE,0.33201597573571356,0.06338250715181856,32,spearman,,,stressed
+sampen_mother_fHR_accel,Mother Score_PSS,0.017142566248331693,0.8974631707097624,59,spearman,,,stressed
+sampen_mother_fHR_accel,Mother Score PDQ,-0.2593010565868385,0.04734765103726846,59,spearman,,,stressed
+sampen_mother_fHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.20627976837703801,0.18446472154257534,43,spearman,,,stressed
+sampen_mother_fHR_accel,COG COMPOSITE SCORE,0.043823347454305106,0.8117620301099727,32,spearman,,,stressed
+sampen_mother_fHR_accel,LANG RECEPT SCORE,0.3313434504609303,0.08499585072373046,28,spearman,,,stressed
+sampen_mother_fHR_accel,LANG EXPRES SCORE,0.2812048889238034,0.1471716299387646,28,spearman,,,stressed
+sampen_mother_fHR_accel,LANG COMP SCORE,0.09417018080332007,0.6336151497410358,28,spearman,,,stressed
+sampen_mother_fHR_accel,MOTOR FINE  SKILLS SCORE,0.057392835283042065,0.7550381211454686,32,spearman,,,stressed
+sampen_mother_fHR_accel,MOTOR GROSS SKILLS SCORE,0.05353791645052007,0.7710394761331457,32,spearman,,,stressed
+sampen_mother_fHR_accel,MOTOR COMPOSITE SCORE,0.33201597573571356,0.06338250715181856,32,spearman,,,stressed
+sampen_fetus_fHR_decel,Mother Score_PSS,,,59,spearman,,,stressed
+sampen_fetus_fHR_decel,Mother Score PDQ,,,59,spearman,,,stressed
+sampen_fetus_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),,,43,spearman,,,stressed
+sampen_fetus_fHR_decel,COG COMPOSITE SCORE,,,32,spearman,,,stressed
+sampen_fetus_fHR_decel,LANG RECEPT SCORE,,,28,spearman,,,stressed
+sampen_fetus_fHR_decel,LANG EXPRES SCORE,,,28,spearman,,,stressed
+sampen_fetus_fHR_decel,LANG COMP SCORE,,,28,spearman,,,stressed
+sampen_fetus_fHR_decel,MOTOR FINE  SKILLS SCORE,,,32,spearman,,,stressed
+sampen_fetus_fHR_decel,MOTOR GROSS SKILLS SCORE,,,32,spearman,,,stressed
+sampen_fetus_fHR_decel,MOTOR COMPOSITE SCORE,,,32,spearman,,,stressed
+sampen_mother_fHR_decel,Mother Score_PSS,,,59,spearman,,,stressed
+sampen_mother_fHR_decel,Mother Score PDQ,,,59,spearman,,,stressed
+sampen_mother_fHR_decel,Mother CORTISOL (pg/mg of maternal hair),,,43,spearman,,,stressed
+sampen_mother_fHR_decel,COG COMPOSITE SCORE,,,32,spearman,,,stressed
+sampen_mother_fHR_decel,LANG RECEPT SCORE,,,28,spearman,,,stressed
+sampen_mother_fHR_decel,LANG EXPRES SCORE,,,28,spearman,,,stressed
+sampen_mother_fHR_decel,LANG COMP SCORE,,,28,spearman,,,stressed
+sampen_mother_fHR_decel,MOTOR FINE  SKILLS SCORE,,,32,spearman,,,stressed
+sampen_mother_fHR_decel,MOTOR GROSS SKILLS SCORE,,,32,spearman,,,stressed
+sampen_mother_fHR_decel,MOTOR COMPOSITE SCORE,,,32,spearman,,,stressed
+sampen_fetus_mHR_accel,Mother Score_PSS,0.19437568171338862,0.14016050111472284,59,spearman,,,stressed
+sampen_fetus_mHR_accel,Mother Score PDQ,0.22428695633893786,0.08768235360467472,59,spearman,,,stressed
+sampen_fetus_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.10776592504323082,0.4915458039751318,43,spearman,,,stressed
+sampen_fetus_mHR_accel,COG COMPOSITE SCORE,-0.06072376200577808,0.7412914240197058,32,spearman,,,stressed
+sampen_fetus_mHR_accel,LANG RECEPT SCORE,0.10538651852870719,0.5935362870992813,28,spearman,,,stressed
+sampen_fetus_mHR_accel,LANG EXPRES SCORE,0.0985039877620389,0.6180008806807908,28,spearman,,,stressed
+sampen_fetus_mHR_accel,LANG COMP SCORE,0.1355700760294691,0.4915478237494223,28,spearman,,,stressed
+sampen_fetus_mHR_accel,MOTOR FINE  SKILLS SCORE,-0.3806138022578336,0.03163116494283365,32,spearman,,,stressed
+sampen_fetus_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.054890263517343746,0.765415121072886,32,spearman,,,stressed
+sampen_fetus_mHR_accel,MOTOR COMPOSITE SCORE,-0.15232200956796474,0.40526562911418895,32,spearman,,,stressed
+sampen_mother_mHR_accel,Mother Score_PSS,0.19115754128767026,0.14697352958209467,59,spearman,,,stressed
+sampen_mother_mHR_accel,Mother Score PDQ,0.22590937404152117,0.0853535979503928,59,spearman,,,stressed
+sampen_mother_mHR_accel,Mother CORTISOL (pg/mg of maternal hair),-0.11417159191642987,0.46600111501891817,43,spearman,,,stressed
+sampen_mother_mHR_accel,COG COMPOSITE SCORE,-0.05058028934567069,0.783379645195355,32,spearman,,,stressed
+sampen_mother_mHR_accel,LANG RECEPT SCORE,0.12227907523276227,0.5353412371958238,28,spearman,,,stressed
+sampen_mother_mHR_accel,LANG EXPRES SCORE,0.09620428376759442,0.6262668231923738,28,spearman,,,stressed
+sampen_mother_mHR_accel,LANG COMP SCORE,0.14093160446001307,0.47440985387945167,28,spearman,,,stressed
+sampen_mother_mHR_accel,MOTOR FINE  SKILLS SCORE,-0.37139994018822425,0.03635934515606218,32,spearman,,,stressed
+sampen_mother_mHR_accel,MOTOR GROSS SKILLS SCORE,-0.05461303996422585,0.7665671365271921,32,spearman,,,stressed
+sampen_mother_mHR_accel,MOTOR COMPOSITE SCORE,-0.1352619444963527,0.46044334788456653,32,spearman,,,stressed
+sampen_fetus_mHR_decel,Mother Score_PSS,-0.05259759211141191,0.6923709233307682,59,spearman,,,stressed
+sampen_fetus_mHR_decel,Mother Score PDQ,-0.1665597776324257,0.2073718781231736,59,spearman,,,stressed
+sampen_fetus_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),-0.03298077692074736,0.8337038855855043,43,spearman,,,stressed
+sampen_fetus_mHR_decel,COG COMPOSITE SCORE,0.007013614692002661,0.9696104371318701,32,spearman,,,stressed
+sampen_fetus_mHR_decel,LANG RECEPT SCORE,0.05798638129807614,0.7694515155637057,28,spearman,,,stressed
+sampen_fetus_mHR_decel,LANG EXPRES SCORE,0.35963558366384457,0.06014955506777654,28,spearman,,,stressed
+sampen_fetus_mHR_decel,LANG COMP SCORE,0.2538908845348695,0.1923367491261108,28,spearman,,,stressed
+sampen_fetus_mHR_decel,MOTOR FINE  SKILLS SCORE,-0.2999424748588542,0.09534003811086138,32,spearman,,,stressed
+sampen_fetus_mHR_decel,MOTOR GROSS SKILLS SCORE,0.12542172405292337,0.4939921415454589,32,spearman,,,stressed
+sampen_fetus_mHR_decel,MOTOR COMPOSITE SCORE,-0.025158954405360017,0.8912840547048888,32,spearman,,,stressed
+sampen_mother_mHR_decel,Mother Score_PSS,-0.054287746099567824,0.6830009807610053,59,spearman,,,stressed
+sampen_mother_mHR_decel,Mother Score PDQ,-0.16454575371909527,0.2129970652621216,59,spearman,,,stressed
+sampen_mother_mHR_decel,Mother CORTISOL (pg/mg of maternal hair),-0.041718541195854456,0.7905309921965877,43,spearman,,,stressed
+sampen_mother_mHR_decel,COG COMPOSITE SCORE,0.02067170646063942,0.9105885588390231,32,spearman,,,stressed
+sampen_mother_mHR_decel,LANG RECEPT SCORE,0.07081522671800448,0.7202798817082279,28,spearman,,,stressed
+sampen_mother_mHR_decel,LANG EXPRES SCORE,0.3514387612441558,0.06667607915615024,28,spearman,,,stressed
+sampen_mother_mHR_decel,LANG COMP SCORE,0.2538908845348695,0.1923367491261108,28,spearman,,,stressed
+sampen_mother_mHR_decel,MOTOR FINE  SKILLS SCORE,-0.2944690720329627,0.10183959505883448,32,spearman,,,stressed
+sampen_mother_mHR_decel,MOTOR GROSS SKILLS SCORE,0.11870270312151679,0.5175916874271458,32,spearman,,,stressed
+sampen_mother_mHR_decel,MOTOR COMPOSITE SCORE,-0.008750940662733919,0.9620875551139645,32,spearman,,,stressed

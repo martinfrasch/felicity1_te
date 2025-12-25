@@ -1,0 +1,119 @@
+# =====================================
+# FELICITy1_TE Research Repository
+# =====================================
+
+# Raw Patient Data (EXCLUDED FOR PRIVACY)
+# ----------------------------------------
+**/TE_values_for_*
+**/TE_ER_data/
+**/hmax_values/
+**/hmax_hmean_values/
+**/accel_decel_counts_values/
+groups_scores_new.xlsx
+patient_group_mapping.csv
+
+# Personal Information & Keys
+# ----------------------------
+*.gsheet
+*.gdoc
+.claude/
+**/*personal*
+**/*private*
+**/*key*
+**/*secret*
+
+# LaTeX Build Artifacts
+# ----------------------
+*.aux
+*.log
+*.bbl
+*.blg
+*.toc
+*.spl
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+
+# PDF Files (Can be regenerated)
+# -------------------------------
+*.pdf
+!figures/*.pdf
+
+# Backup & Temporary Files
+# -------------------------
+*_backup_*.tex
+*.bak
+*~
+.DS_Store
+*.swp
+*.swo
+*_BACKUP_*
+*_BASE_*
+*_LOCAL_*
+*_REMOTE_*
+
+# Archives & Zip Files
+# ---------------------
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Python Cache & Virtual Environment
+# -----------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Obsidian (Personal Notes)
+# --------------------------
+.obsidian/
+
+# Editor & IDE Files
+# -------------------
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# Analysis Output (Can be regenerated)
+# -------------------------------------
+analysis_output/
+analysis_output_corrected/
+*_results.txt
+*_results.csv
+*.png
+*.jpg
+*.jpeg
+
+# Submission Directories (Keep source only)
+# ------------------------------------------
+arxiv_submission/
+arxiv_submission_v*/
+arxiv_test/
+overleaf_clean/
+OVERLEAF*/
+Measuring_the_time_scale_dependent_information_flow*/
+
+# Daily Notes (Personal)
+# -----------------------
+2025-*.md
+
+# Keep These Important Files
+# ---------------------------
+!README.md
+!LICENSE
+!requirements.txt
+!main.tex
+!main_final.tex
+!fetus.bib

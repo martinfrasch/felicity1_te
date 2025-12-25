@@ -107,9 +107,13 @@ analysis_output_corrected/
 # -------------------------------------------------------------
 main.tex
 main_final.tex
-fetus.bib
+*.bib
 references.bib
 *.tex
+
+# Documentation (Keep only README.md)
+# ------------------------------------
+*.md
 !README.md
 
 # Submission Directories (Link to arXiv/Published Article Instead)

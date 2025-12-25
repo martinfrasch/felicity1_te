@@ -1,0 +1,11 @@
+Parameter,Coef,SE,p-value,Sig
+Event_Type(deceleration),-0.0606,0.0028,0.000000,***
+HR_Source(maternal):Event_Type(deceleration), 0.0282,0.0028,0.000000,***
+HR_Source(maternal),-0.0109,0.0028,0.000074,***
+Sex(male):HR_Source(maternal), 0.0027,0.0029,0.341807,ns
+Sex(male),-0.0026,0.0028,0.361056,ns
+Sex(male):Event_Type(deceleration), 0.0014,0.0029,0.625772,ns
+Stress(stressed):Event_Type(deceleration),-0.0013,0.0028,0.651139,ns
+Stress(stressed), 0.0007,0.0027,0.802071,ns
+Stress(stressed):HR_Source(maternal),-0.0005,0.0028,0.864681,ns
+Sex(male):Stress(stressed),-0.0001,0.0029,0.984531,ns

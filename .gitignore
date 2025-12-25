@@ -86,12 +86,19 @@ ENV/
 *.sublime-*
 *.code-workspace
 
+# Raw Data Files (Exclude from repository)
+# ------------------------------------------
+**/entropy_rate*.txt
+**/SampEn*.txt
+sample_entropy_mlm_data*.csv
+mlm_*_data.csv
+*_results.txt
+statistical_results*.txt
+
 # Analysis Output (Can be regenerated)
 # -------------------------------------
 analysis_output/
 analysis_output_corrected/
-*_results.txt
-*_results.csv
 *.png
 *.jpg
 *.jpeg
@@ -119,8 +126,22 @@ Measuring the time-scale-dependent*/
 # -----------------------
 2025-*.md
 
+# Working Documentation (Exclude drafts and session notes)
+# ---------------------------------------------------------
+**/SESSION_SUMMARY*.md
+**/CLAUDE.md
+**/*_DRAFT*.md
+**/*INSTRUCTIONS*.md
+**/*_README.txt
+**/SUBMISSION*.txt
+**/OVERLEAF*.txt
+**/ARXIV*.txt
+**/MDPI*.txt
+
 # Keep These Important Files
 # ---------------------------
 !README.md
 !LICENSE
 !requirements.txt
+!PROJECT_INDEX.md
+!GITHUB_REPO_SETUP_SUMMARY.md

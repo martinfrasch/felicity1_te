@@ -1,0 +1,20 @@
+Parameter,Coef,SE,p-value,Sig
+Cond[T.none], 0.2061,0.0351,0.000000,***
+Cond[T.mother_decel],-0.1228,0.0491,0.012311,*
+Metric(hmean),-0.1172,0.0515,0.022898,*
+Cond[T.fetus_decel],-0.0816,0.0424,0.054423,ns
+HR_Source(mother), 0.0534,0.0337,0.112826,ns
+Stress(stressed),-0.0852,0.0559,0.127540,ns
+Sex(male):HR_Source(mother), 0.0598,0.0418,0.152649,ns
+Sex(male),-0.1058,0.0784,0.177232,ns
+Metric(hmean):Cond[T.none],-0.0536,0.0425,0.208077,ns
+Sex(male):Stress(stressed), 0.1079,0.0886,0.223152,ns
+Sex(male):Cond[T.mother_accel],-0.0705,0.0608,0.245630,ns
+Sex(male):Cond[T.mother_decel],-0.0522,0.0611,0.392623,ns
+Metric(hmean):Cond[T.fetus_decel], 0.0392,0.0510,0.441493,ns
+Cond[T.mother_accel],-0.0335,0.0490,0.493885,ns
+Metric(hmean):Cond[T.mother_decel], 0.0397,0.0598,0.507224,ns
+Metric(hmean):HR_Source(mother),-0.0127,0.0411,0.757521,ns
+Metric(hmean):Cond[T.mother_accel], 0.0181,0.0595,0.760982,ns
+Sex(male):Cond[T.fetus_decel], 0.0052,0.0532,0.922250,ns
+Sex(male):Cond[T.none],-0.0024,0.0436,0.955735,ns

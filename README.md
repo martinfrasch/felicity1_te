@@ -159,7 +159,7 @@ The analysis scripts expect data in the following format:
 ### Methodological Insights
 - Mixed linear models essential for repeated measures
 - Initial t-test sex effects disappeared with proper statistical modeling
-- Demonstrates importance of accounting for pseudoreplication
+- Demonstrates the importance of accounting for pseudoreplication
 
 ---
 
@@ -191,7 +191,12 @@ All 12 publication figures included in `figures/`:
 
 If you use this work, please cite the manuscript:
 
-**arXiv**: [URL TBD - Coming Soon]
+**arXiv**: 	arXiv:2512.22270 [q-bio.QM]
+ 	        https://doi.org/10.48550/arXiv.2512.22270
+            
+
+**Entropy metrics**: https://github.com/nbgarnier/entropy 
+
 
 **Published Article**: [URL TBD - Coming Soon]
 

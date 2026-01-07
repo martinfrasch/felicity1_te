@@ -9,7 +9,8 @@
 
 ## 📄 Manuscript Access
 
-**arXiv Preprint**: [URL TBD - Coming Soon]
+**arXiv Preprint**: arXiv:2512.22270 [q-bio.QM]
+ 	                https://doi.org/10.48550/arXiv.2512.22270
 
 **Published Article**: [URL TBD - Coming Soon]
 

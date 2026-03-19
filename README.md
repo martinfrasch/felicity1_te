@@ -1,16 +1,16 @@
 # FELICITy1 Transfer Entropy Analysis
 
-**Measuring the time-scale-dependent information flow between maternal and fetal heartbeats during the third trimester**
+**Measuring the time-scale-dependent information flow between maternal and fetal heartbeats during the third trimester: impact of fetal sex and maternal chronic stress**
 
-[![arXiv](https://img.shields.io/badge/arXiv-TBD-b31b1b.svg)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2512.22270-b31b1b.svg)](https://arxiv.org/abs/2512.22270)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
-## 📄 Manuscript Access
+## Manuscript Access
 
 **arXiv Preprint**: arXiv:2512.22270 [q-bio.QM]
- 	                https://doi.org/10.48550/arXiv.2512.22270
+                    https://doi.org/10.48550/arXiv.2512.22270
 
 **Published Article**: [URL TBD - Coming Soon]
 
@@ -27,7 +27,8 @@ This repository provides the analysis code and publication figures for a study o
 - **Dual Coupling Mechanisms**: Stress-invariant state-dependent synchronization and stress-sensitive temporal information transfer
 - **60% Coupling Strength**: Maternal heart rate decelerations exert approximately 60% coupling strength on fetal heart rate complexity
 - **Sex-by-Stress Interaction**: Robust interaction in transfer entropy from mixed linear models
-- **Optimal Sampling**: 4 Hz identified as optimal sampling rate for information flow capture
+- **4 Hz Sufficiency**: Standard fetal monitoring sampling rate sufficient to capture information flow
+- **SE vs ER Dissociation**: Sample entropy does not detect cross-signal coupling despite adequate data quality, confirming SE and ER capture fundamentally different aspects of HR dynamics
 
 ---
 
@@ -39,57 +40,74 @@ felicity1_te/
 ├── LICENSE                                      # MIT License
 ├── requirements.txt                             # Python dependencies
 │
-├── Analysis Scripts (16 files)
-│   ├── mixed_linear_model_analysis.py          # MLM implementation
-│   ├── generate_correlation_heatmaps.py        # Correlation analysis
-│   ├── sample_entropy_mlm_analysis_simplified.py
-│   ├── statistical_analysis_v2.py              # Statistical tests
-│   ├── generate_figures.py                     # Figure generation
-│   ├── reproduce_manuscript_figures.py         # Reproducibility script
-│   └── ... (10 more scripts)
+├── Core Analysis Scripts
+│   ├── corrected_group_analysis.py              # Patient data pipeline & group assignment
+│   ├── mixed_linear_model_analysis_complete.py  # Complete MLM analysis (ER, SE, TE)
+│   ├── mixed_linear_model_analysis.py           # MLM implementation (v1)
+│   ├── mixed_linear_model_analysis_v2.py        # MLM implementation (v2)
+│   ├── sensitivity_analysis_covariates.py       # Covariate sensitivity analysis (R2) *NEW*
+│   ├── rerun_SE_MLM_new_data.py                 # SE MLM with recomputed SampEn (R2) *NEW*
+│   ├── sample_entropy_mlm_analysis.py           # Sample entropy MLM
+│   ├── sample_entropy_mlm_analysis_simplified.py # Simplified SE MLM
+│   ├── statistical_analysis_v2.py               # Statistical tests
+│   └── validate_data.py                         # Data validation & group verification
 │
-├── Figures (12 files)
-│   ├── figures/accel_decel_summary_fs_20_tau_50.pdf
-│   ├── figures/TE_accel_decel_boxplots_fs_20_tau_-1.pdf
-│   ├── figures/boxplots_max_h_condition_foetus_fs_20.pdf
-│   ├── figures/entropy_rate_ensemble_averaged_117_couples.pdf
-│   ├── figures/cohort.pdf
-│   └── ... (7 more figures)
+├── Figure & Visualization Scripts
+│   ├── generate_figures.py                      # Figure generation
+│   ├── generate_correlation_heatmaps.py         # Correlation heatmaps
+│   ├── generate_correlation_heatmaps_sex_stratified.py
+│   ├── generate_correlation_heatmaps_sex_stress.py
+│   ├── generate_publication_materials.py        # Publication-ready tables/figures
+│   ├── reproduce_manuscript_figures.py          # Reproducibility script
+│   └── verify_group_assignments.py              # Group assignment verification
+│
+├── Figures (12 PDF files)
+│   └── figures/
 │
 └── Results (4 files)
-    ├── mlm_accel_decel_results.csv             # MLM results
-    ├── mlm_hmax_hmean_results.csv              # Entropy rate results
+    ├── mlm_accel_decel_results.csv
+    ├── mlm_hmax_hmean_results.csv
     ├── sample_entropy_mlm_results_simplified.csv
     └── sample_entropy_mlm_results_simplified.txt
 ```
-
-**Total**: 37 files
 
 ---
 
 ## Study Design
 
 ### Cohort
-- **N = 120** pregnant women in third trimester
-  - 58 stressed group
-  - 62 control group
-- **Design**: Prospective cohort study
-- **Measurements**: Maternal and fetal heart rate recordings
+- **N = 118** mother-fetus dyads in third trimester (analytical sample)
+  - 59 stressed group (PSS ≥ 19)
+  - 59 control group (PSS < 19)
+  - 49 male fetuses, 69 female fetuses
+- **Design**: Prospective matched cohort study
+- **Measurements**: Transabdominal ECG (AN24 device) → SAVER-extracted maternal and fetal HR
+
+### Exclusions
+From the initial 165 participants, 47 dyads were excluded:
+- 45 due to fHR indistinguishable from mHR (below 100 bpm)
+- 1 (FS-004) lacking clinical records
+- 1 (FS-144) missing PSS score precluding stress classification
+
+Additionally, 1 participant (FS-124) was excluded from Table 2 only (net TE outlier, z-score = 23.7), yielding n = 117 for that analysis.
 
 ### Information-Theoretical Measures
-- **Transfer Entropy (TE)**: Temporal information flow from maternal to fetal heart rate
-- **Entropy Rate (ER)**: Intrinsic complexity of heart rate time series
-- **Sample Entropy (SE)**: Regularity and predictability measures
+- **Transfer Entropy (TE)**: Directed information flow from maternal to fetal heart rate
+- **Entropy Rate (ER)**: Rate of new information generation in HR time series
+- **Sample Entropy (SE)**: Signal regularity and complexity
 
 ### Conditioning Paradigms
-- Full recording analysis
-- Acceleration epochs (heart rate increases)
-- Deceleration epochs (heart rate decreases)
+- Full recording analysis (no conditioning)
+- Acceleration epochs (HR increases)
+- Deceleration epochs (HR decreases)
+- Applied to both maternal and fetal HR → 50 features total
 
 ### Statistical Analysis
 - Mixed linear models with random intercepts (accounting for repeated measures)
+- Sensitivity analysis with covariates (gestational age, maternal age, BMI)
 - False Discovery Rate (FDR) correction for multiple comparisons
 - Exploratory correlations with maternal cortisol and infant neurodevelopmental outcomes
+- Gaussian probability metric for Table 2 (proportion of cohort with reversed net TE)
 
 ---
 
@@ -115,28 +133,28 @@ pip install -r requirements.txt
 
 ### Running Analyses
 
-**Note**: Raw data is not included in this repository. The scripts are provided for transparency and can be run with appropriately formatted data.
+**Note**: Raw data is not included in this repository due to privacy restrictions. The scripts are provided for transparency and can be run with appropriately formatted data.
 
 ```bash
-# Mixed Linear Model Analysis
-python mixed_linear_model_analysis.py
+# Core analyses
+python corrected_group_analysis.py              # Build patient-level dataset
+python mixed_linear_model_analysis_complete.py  # Run all MLMs (ER, SE, TE)
+python sensitivity_analysis_covariates.py       # Covariate sensitivity (R2)
+python rerun_SE_MLM_new_data.py                 # SE MLM with recomputed data (R2)
 
-# Correlation Analysis
+# Figures and visualizations
 python generate_correlation_heatmaps.py
-
-# Sample Entropy Analysis
-python sample_entropy_mlm_analysis_simplified.py
-
-# Reproduce Manuscript Figures
+python generate_correlation_heatmaps_sex_stratified.py
+python generate_correlation_heatmaps_sex_stress.py
 python reproduce_manuscript_figures.py
 ```
 
 ### Expected Data Format
 
-The analysis scripts expect data in the following format:
-- CSV files with patient IDs, sex, stress group assignments
-- Entropy measures (TE, ER, SE) for each conditioning paradigm
-- Maternal cortisol and infant neurodevelopmental scores (for correlations)
+The analysis scripts expect:
+- `patient_level_data_corrected.csv`: Patient IDs, sex, stress group, entropy features
+- `.npz` files from Nicolas Garnier's entropy computation toolbox
+- `FELICITy-Dataset-MixedModels.ods`: Clinical outcomes (Bayley, cortisol)
 
 ---
 
@@ -144,74 +162,61 @@ The analysis scripts expect data in the following format:
 
 ### Coupling Strength
 - Maternal heart rate decelerations → 60% coupling strength on fetal complexity
-- Effect conserved across sex and stress groups
+- Effect conserved across sex and stress groups (p = 0.128 for stress effect)
 - Represents fundamental physiological coordination
 
 ### Transfer Entropy
-- Sex-by-stress interaction (p < 0.05 in mixed linear models)
+- Net TE significantly positive in all subgroups (p = 0.021–0.032, Table 2)
+- Significant stress effect (p = 0.026) and sex-by-stress interaction (p = 0.009) in MLM
 - Exploratory associations with maternal cortisol (not FDR-corrected)
-- Requires independent replication
+
+### Sample Entropy vs Entropy Rate
+- With recomputed SE (99.5% non-zero, 2,348 obs), SE still does not detect cross-signal coupling
+- Confirms SE and ER capture fundamentally different aspects of HR dynamics
+- SE sensitive to within-signal state changes, ER to cross-signal coupling
 
 ### Acceleration Predominance
 - Universal pattern in maternal and fetal heart rates
 - Stronger in fetal signals
 - Independent of sex or stress status
 
-### Methodological Insights
-- Mixed linear models essential for repeated measures
-- Initial t-test sex effects disappeared with proper statistical modeling
-- Demonstrates the importance of accounting for pseudoreplication
-
 ---
 
-## Figures
+## Revision History
 
-All 12 publication figures included in `figures/`:
+### R2 (March 2025)
+- Restructured manuscript: technical content moved to Supplementary Materials
+- Added sensitivity analysis with covariates (GA, maternal age, BMI)
+- Recomputed sample entropy with improved algorithm (286 → 2,348 observations)
+- Data reconciliation: identified and excluded FS-004, FS-144, FS-124 (from Table 2)
+- Final sample: N = 118 (117 for Table 2)
+- Added "From Information Metrics to Physiological Meaning" Discussion section
+- Corrected Table 2 statistical method description
 
-### Statistical Analysis
-- Acceleration/deceleration summary statistics
-- Fetal acceleration/deceleration point counts
-- Maternal acceleration/deceleration point counts
-
-### Transfer Entropy
-- TE with acceleration/deceleration conditioning
-- Sampling rate dependence analysis
-
-### Entropy Rate
-- ER conditioned on fetal state
-- ER conditioned on maternal state
-- Ensemble-averaged entropy rate
-
-### Methods & Cohort
-- Signal filtering methodology
-- Study cohort description
+### R1 (December 2024)
+- Initial submission with complete analysis
 
 ---
 
 ## Citation
 
-If you use this work, please cite the manuscript:
+**arXiv**: arXiv:2512.22270 [q-bio.QM]
+           https://doi.org/10.48550/arXiv.2512.22270
 
-**arXiv**: 	arXiv:2512.22270 [q-bio.QM]
- 	        https://doi.org/10.48550/arXiv.2512.22270
-            
-
-**Entropy metrics**: https://github.com/nbgarnier/entropy 
-
-
-**Published Article**: [URL TBD - Coming Soon]
+**Entropy metrics toolbox**: https://github.com/nbgarnier/entropy
 
 ```bibtex
-@article{felicity1_te_2025,
-  title={Measuring the time-scale-dependent information flow between maternal and fetal heartbeats during the third trimester},
-  author={[Authors]},
-  journal={[Journal TBD]},
+@article{garnier2025felicity_te,
+  title={Measuring the time-scale-dependent information flow between maternal
+         and fetal heartbeats during the third trimester: impact of fetal sex
+         and maternal chronic stress},
+  author={Garnier, Nicolas B. and Molinet, Maria S. and Antonelli, Marta C.
+          and Lobmaier, Silvia M. and Frasch, Martin G.},
+  journal={Biology},
   year={2025},
-  note={arXiv: [ID TBD]}
+  note={arXiv:2512.22270}
 }
 ```
-
-> **Note**: Citation information will be updated once the arXiv preprint and/or published article are available.
 
 ---
 
@@ -220,27 +225,12 @@ If you use this work, please cite the manuscript:
 **Raw patient data is excluded** from this repository to protect participant privacy.
 
 **What's included**:
-- ✅ All analysis code (Python scripts)
-- ✅ Publication figures (PDF)
-- ✅ Analysis results (CSV) for verification
-- ✅ Software requirements and setup instructions
+- All analysis code (Python scripts)
+- Publication figures (PDF)
+- Analysis results (CSV) for verification
+- Software requirements and setup instructions
 
-**Data sharing**: Anonymized data may be available upon reasonable request and appropriate ethics approval. Contact the corresponding author for inquiries.
-
----
-
-## Reproducibility
-
-This repository enables reproduction of:
-1. **Statistical analyses** - All MLM, correlation, and entropy calculations
-2. **Publication figures** - Scripts to regenerate all figures
-3. **Result verification** - Result CSVs provided for comparison
-
-To reproduce results with appropriate data:
-1. Install dependencies: `pip install -r requirements.txt`
-2. Format data according to expected structure (see Usage section)
-3. Run analysis scripts in the provided order
-4. Compare outputs with included result files
+**Data sharing**: Anonymized data may be available upon reasonable request and appropriate ethics approval. Contact the corresponding author.
 
 ---
 
@@ -252,24 +242,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions about this research:
-- Corresponding author: [Contact information]
-- Data requests: [Contact information]
+- Nicolas B. Garnier: nicolas.garnier@ens-lyon.fr
+- Martin G. Frasch: mfrasch@uw.edu
 
 ---
 
 ## Keywords
 
-Maternal-fetal coupling, transfer entropy, prenatal stress programming, fetal autonomic development, heart rate variability, bivariate phase-rectified signal averaging, mixed linear models, sex differences
+Maternal-fetal coupling, transfer entropy, entropy rate, sample entropy, prenatal stress programming, fetal autonomic development, heart rate variability, mixed linear models, sex differences, conditioning framework
 
 ---
 
-**Repository Contents Summary**:
-- 📊 16 Python analysis scripts
-- 📈 12 publication figures (PDF)
-- 📋 4 result files (CSV/TXT)
-- 📄 1 README (this file)
-- ⚖️ MIT License
-- 📦 Python requirements
-
-**Last Updated**: December 2025
+**Last Updated**: March 2025

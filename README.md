@@ -16,6 +16,8 @@
 
 > **Note**: This repository contains analysis code and figures for reproducibility. The full manuscript is available via the links above.
 
+> **For coupling analyses, see also** [[TE scripts](https://github.com/nbgarnier/Felicity_scripts)]
+
 ---
 
 ## Overview

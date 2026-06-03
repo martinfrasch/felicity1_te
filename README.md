@@ -12,7 +12,7 @@
 **arXiv Preprint**: arXiv:2512.22270 [q-bio.QM]
                     https://doi.org/10.48550/arXiv.2512.22270
 
-**Published Article**: [URL TBD - Coming Soon]
+**Published Article**: [[published paper](https://doi.org/10.3390/biology15100749)]
 
 > **Note**: This repository contains analysis code and figures for reproducibility. The full manuscript is available via the links above.
 
